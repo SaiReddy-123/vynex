@@ -23,29 +23,15 @@
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 body{font-family:'Nunito',sans-serif;background:var(--off);color:var(--text);overflow-x:hidden;}
-
-/* ── PAGE SYSTEM ── */
-.page{display:none;}
-.page.active{display:block;}
-
-/* ── TOP BAR ── */
+.page{display:none;}.page.active{display:block;}
 .topbar{background:var(--navy);color:#fff;padding:9px 24px;display:flex;align-items:center;gap:14px;position:sticky;top:0;z-index:300;}
 .tb-logo{text-decoration:none;display:flex;flex-direction:column;line-height:1;flex-shrink:0;}
 .tb-logo .lg{font-family:'Bitter',serif;font-size:22px;font-weight:900;color:var(--orange);}
 .tb-logo .ls{font-size:9px;color:#999;letter-spacing:.15em;text-transform:uppercase;}
-.tb-search{flex:1;max-width:700px;display:flex;border-radius:4px;overflow:hidden;}
-.tb-search select{background:#f3f3f3;color:#333;border:none;padding:0 10px;font-size:12px;font-family:'Nunito',sans-serif;cursor:pointer;border-right:1px solid #ccc;outline:none;}
-.tb-search input{flex:1;padding:10px 14px;border:none;font-size:14px;font-family:'Nunito',sans-serif;outline:none;}
-.tb-search button{background:var(--orange);border:none;padding:0 18px;cursor:pointer;font-size:17px;transition:background .2s;}
-.tb-search button:hover{background:var(--orange-l);}
 .tb-right{display:flex;gap:18px;align-items:center;margin-left:auto;}
 .tb-link{color:#fff;text-decoration:none;font-size:13px;font-weight:700;white-space:nowrap;cursor:pointer;transition:color .2s;}
 .tb-link:hover{color:var(--orange);}
 .tb-link small{display:block;font-size:10px;color:#999;font-weight:400;}
-.tb-cta{background:var(--orange);color:#fff;padding:8px 16px;border-radius:4px;font-weight:800;font-size:13px;text-decoration:none;cursor:pointer;border:none;font-family:'Nunito',sans-serif;transition:background .2s;}
-.tb-cta:hover{background:var(--orange-l);}
-
-/* ── NAV STRIP ── */
 .navstrip{background:var(--navy2);padding:7px 24px;display:flex;gap:2px;align-items:center;overflow-x:auto;position:sticky;top:52px;z-index:299;}
 .navstrip::-webkit-scrollbar{height:2px;}
 .navstrip::-webkit-scrollbar-thumb{background:#555;}
@@ -53,8 +39,6 @@ body{font-family:'Nunito',sans-serif;background:var(--off);color:var(--text);ove
 .ns-item:hover,.ns-item.active{border-color:rgba(255,255,255,.6);color:#fff;}
 .ns-item.highlight{color:var(--orange);border-color:transparent;}
 .ns-item.highlight:hover{border-color:var(--orange);}
-
-/* ── HERO ── */
 .hero{background:linear-gradient(120deg,#131921 0%,#1a2a4a 45%,#0d3050 100%);position:relative;overflow:hidden;padding:52px 40px 44px;}
 .hero-shapes{position:absolute;inset:0;pointer-events:none;overflow:hidden;}
 .hs{position:absolute;border-radius:50%;opacity:.07;}
@@ -77,35 +61,25 @@ body{font-family:'Nunito',sans-serif;background:var(--off);color:var(--text);ove
 .hstat{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:var(--r);padding:16px 24px;text-align:center;min-width:120px;}
 .hstat-num{font-family:'Bitter',serif;font-size:28px;font-weight:900;color:var(--orange);}
 .hstat-lbl{font-size:10px;color:#9aabb8;text-transform:uppercase;letter-spacing:.1em;margin-top:3px;}
-
-/* ── MARQUEE ── */
 .marquee{background:var(--orange);padding:9px 0;overflow:hidden;}
 .mtrack{display:flex;animation:mq 22s linear infinite;width:max-content;}
 .mi{white-space:nowrap;padding:0 28px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#fff;font-weight:800;display:flex;align-items:center;gap:10px;}
 .mi::after{content:'●';font-size:7px;opacity:.6;}
 @keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-
-/* ── TRUST BAR ── */
 .trustbar{background:#fff;border-bottom:1px solid var(--border);padding:12px 24px;display:flex;gap:24px;flex-wrap:wrap;}
 .ti{display:flex;align-items:center;gap:7px;font-size:12px;font-weight:700;color:var(--text2);white-space:nowrap;}
 .ti span{font-size:18px;}
-
-/* ── SECTION COMMONS ── */
 .sec{padding:28px 24px;}
 .sec-hdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;padding-bottom:10px;border-bottom:3px solid var(--orange);}
 .sec-hdr h2{font-family:'Bitter',serif;font-size:21px;font-weight:900;}
 .sec-hdr a,.sec-hdr button{font-size:13px;color:var(--blue);text-decoration:none;font-weight:700;background:none;border:none;cursor:pointer;font-family:'Nunito',sans-serif;}
 .sec-hdr a:hover,.sec-hdr button:hover{color:var(--orange);text-decoration:underline;}
-
-/* ── CATEGORY GRID ── */
 .cat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:10px;}
 .cat-card{background:#fff;border-radius:var(--r);padding:18px 12px;text-align:center;cursor:pointer;transition:all .22s;border:2px solid transparent;text-decoration:none;display:block;}
 .cat-card:hover{border-color:var(--orange);box-shadow:0 4px 16px rgba(255,107,0,.18);transform:translateY(-3px);}
 .cc-icon{font-size:30px;margin-bottom:7px;}
 .cc-name{font-size:12px;font-weight:800;color:var(--text);margin-bottom:3px;}
 .cc-sub{font-size:10px;color:var(--text2);}
-
-/* ── DEST TABS & PANELS ── */
 .dest-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px;}
 .dtab{padding:8px 18px;border-radius:20px;font-size:13px;font-weight:700;cursor:pointer;border:2px solid var(--border);background:#fff;color:var(--text2);transition:all .2s;display:flex;align-items:center;gap:6px;font-family:'Nunito',sans-serif;}
 .dtab:hover{border-color:var(--orange);color:var(--orange);}
@@ -113,7 +87,6 @@ body{font-family:'Nunito',sans-serif;background:var(--off);color:var(--text);ove
 .dest-panel{display:none;animation:fadeUp .3s ease;}
 .dest-panel.active{display:block;}
 @keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
-
 .dest-banner{border-radius:var(--r);overflow:hidden;margin-bottom:16px;position:relative;height:200px;display:flex;align-items:flex-end;}
 .dest-banner-bg{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:90px;}
 .dest-banner-overlay{position:absolute;inset:0;background:linear-gradient(to right,rgba(0,0,0,.7) 0%,transparent 55%);}
@@ -122,19 +95,16 @@ body{font-family:'Nunito',sans-serif;background:var(--off);color:var(--text);ove
 .dbi-sub{font-size:12px;color:rgba(255,255,255,.78);margin-top:3px;}
 .dbi-badges{display:flex;gap:7px;margin-top:10px;flex-wrap:wrap;}
 .dbadge{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);color:#fff;font-size:10px;font-weight:700;padding:3px 9px;border-radius:10px;}
-
 .dinfo-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:10px;margin-bottom:16px;}
 .dib{background:#fff;border-radius:var(--r);padding:14px 16px;border-left:4px solid var(--orange);}
 .dib-lbl{font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:var(--text2);margin-bottom:5px;font-weight:700;}
 .dib-val{font-size:14px;font-weight:800;}
-
 .courses-box{background:#fff;border-radius:var(--r);padding:18px;margin-bottom:14px;}
 .cbox-title{font-size:14px;font-weight:800;margin-bottom:12px;}
 .cpills{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:8px;}
 .cpill{background:var(--off);border:1.5px solid var(--border);border-radius:7px;padding:10px 12px;font-size:12px;font-weight:700;display:flex;align-items:center;gap:7px;cursor:pointer;transition:all .2s;}
 .cpill:hover{background:var(--blue-pale);border-color:var(--blue);color:var(--blue);}
 .cpill-ic{font-size:18px;}
-
 .uni-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;margin-bottom:14px;}
 .uni-card{background:#fff;border-radius:var(--r);padding:16px;display:flex;gap:12px;align-items:flex-start;border:2px solid transparent;cursor:pointer;transition:all .2s;}
 .uni-card:hover{border-color:var(--blue);box-shadow:var(--shadow);}
@@ -143,15 +113,12 @@ body{font-family:'Nunito',sans-serif;background:var(--off);color:var(--text);ove
 .uni-loc{font-size:11px;color:var(--text2);margin-bottom:5px;}
 .uni-tags{display:flex;gap:5px;flex-wrap:wrap;}
 .utag{font-size:10px;font-weight:700;padding:2px 7px;border-radius:8px;}
-
 .checklist-box{background:#fff;border-radius:var(--r);padding:16px;margin-bottom:12px;}
 .cl-title{font-size:14px;font-weight:900;margin-bottom:12px;}
 .cl-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border);font-size:13px;}
 .cl-row:last-child{border-bottom:none;font-weight:900;color:var(--orange);}
 .cl-lbl{color:var(--text2);font-weight:600;}
 .cl-val{font-weight:800;}
-
-/* ── SERVICES ── */
 .svc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;}
 .svc-card{background:#fff;border-radius:var(--r);overflow:hidden;border:2px solid transparent;cursor:pointer;transition:all .22s;text-decoration:none;display:block;}
 .svc-card:hover{border-color:var(--orange);box-shadow:0 6px 20px rgba(255,107,0,.15);transform:translateY(-4px);}
@@ -160,16 +127,12 @@ body{font-family:'Nunito',sans-serif;background:var(--off);color:var(--text);ove
 .svc-title{font-size:13px;font-weight:800;margin-bottom:5px;}
 .svc-desc{font-size:11px;color:var(--text2);line-height:1.55;}
 .svc-badge{display:inline-block;font-size:9px;font-weight:800;padding:2px 7px;border-radius:8px;margin-top:7px;}
-
-/* ── DEALS ── */
 .deals-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px;}
 .deal-card{background:#fff;border-radius:var(--r);padding:16px;text-align:center;border:2px solid var(--border);cursor:pointer;transition:all .2s;}
 .deal-card:hover{border-color:var(--green);box-shadow:0 4px 14px rgba(6,125,98,.15);}
 .deal-pct{font-family:'Bitter',serif;font-size:26px;font-weight:900;color:var(--green);}
 .deal-title{font-size:12px;font-weight:800;margin:4px 0;}
 .deal-sub{font-size:10px;color:var(--text2);}
-
-/* ── PROCESS ── */
 .proc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(175px,1fr));gap:10px;}
 .proc-card{background:#fff;border-radius:var(--r);padding:18px;border-top:4px solid;cursor:pointer;transition:all .2s;position:relative;}
 .proc-card:hover{transform:translateY(-3px);box-shadow:var(--shadow);}
@@ -177,8 +140,6 @@ body{font-family:'Nunito',sans-serif;background:var(--off);color:var(--text);ove
 .proc-icon{font-size:26px;margin-bottom:9px;}
 .proc-title{font-size:12px;font-weight:800;margin-bottom:5px;}
 .proc-desc{font-size:11px;color:var(--text2);line-height:1.5;}
-
-/* ── TESTIMONIALS ── */
 .testi-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:12px;}
 .testi-card{background:#fff;border-radius:var(--r);padding:20px;border-top:4px solid var(--orange);}
 .t-stars{color:var(--orange);font-size:13px;letter-spacing:2px;margin-bottom:8px;}
@@ -187,14 +148,10 @@ body{font-family:'Nunito',sans-serif;background:var(--off);color:var(--text);ove
 .t-av{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:15px;color:#fff;flex-shrink:0;}
 .t-name{font-size:13px;font-weight:800;}
 .t-role{font-size:10px;color:var(--text2);margin-top:2px;}
-
-/* ── CTA BANNER ── */
 .cta-banner{background:linear-gradient(120deg,#131921,#1a2a4a);border-radius:12px;padding:36px 40px;display:flex;justify-content:space-between;align-items:center;gap:24px;margin:8px 0;}
 .cta-banner h2{font-family:'Bitter',serif;font-size:24px;font-weight:900;color:#fff;margin-bottom:6px;}
 .cta-banner p{font-size:13px;color:#9aabb8;}
 .cta-btns{display:flex;gap:10px;flex-shrink:0;}
-
-/* ── CONTACT ── */
 .contact-layout{display:grid;grid-template-columns:1fr 1.4fr;gap:18px;}
 .cinfo{background:#fff;border-radius:var(--r);padding:22px;}
 .cinfo-title{font-family:'Bitter',serif;font-size:18px;font-weight:900;margin-bottom:14px;}
@@ -213,8 +170,11 @@ body{font-family:'Nunito',sans-serif;background:var(--off);color:var(--text);ove
 .fg textarea{resize:none;}
 .submit-btn{width:100%;padding:13px;background:var(--orange);border:none;border-radius:6px;color:#fff;font-family:'Nunito',sans-serif;font-size:13px;font-weight:800;cursor:pointer;transition:all .2s;}
 .submit-btn:hover{background:var(--orange-l);}
-
-/* ══════════ CAREERS PAGE ══════════ */
+/* ── VALIDATION ── */
+.err-msg{display:none;font-size:11px;color:var(--red);margin-top:4px;font-weight:700;}
+.err-msg.show{display:block;}
+.fg input.invalid,.fg select.invalid,.fg textarea.invalid{border-color:var(--red)!important;background:var(--red-pale)!important;}
+/* ── CAREERS ── */
 .careers-hero{background:linear-gradient(120deg,#131921 0%,#1c2d44 50%,#0d3050 100%);padding:52px 40px;position:relative;overflow:hidden;}
 .careers-hero::before{content:'';position:absolute;top:-80px;right:-80px;width:400px;height:400px;background:radial-gradient(circle,rgba(255,107,0,.12),transparent 70%);pointer-events:none;}
 .careers-hero-inner{position:relative;z-index:2;max-width:660px;}
@@ -225,23 +185,17 @@ body{font-family:'Nunito',sans-serif;background:var(--off);color:var(--text);ove
 .careers-hero p{font-size:14px;color:#b8c4cc;line-height:1.7;max-width:520px;margin-bottom:24px;}
 .perks-strip{display:flex;gap:14px;flex-wrap:wrap;}
 .perk{display:flex;align-items:center;gap:7px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:6px 14px;font-size:12px;color:#fff;font-weight:700;}
-
-/* Culture section */
 .culture-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;}
 .culture-card{background:#fff;border-radius:var(--r);padding:20px 16px;text-align:center;border-bottom:4px solid;}
 .cc2-icon{font-size:32px;margin-bottom:10px;}
 .cc2-title{font-size:13px;font-weight:800;margin-bottom:6px;}
 .cc2-desc{font-size:11px;color:var(--text2);line-height:1.55;}
-
-/* Filter bar */
 .filter-bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px;}
 .filter-btn{padding:7px 16px;border-radius:20px;font-size:12px;font-weight:700;cursor:pointer;border:2px solid var(--border);background:#fff;color:var(--text2);transition:all .2s;font-family:'Nunito',sans-serif;}
 .filter-btn:hover{border-color:var(--orange);color:var(--orange);}
 .filter-btn.active{background:var(--orange);border-color:var(--orange);color:#fff;}
-
-/* Job Cards */
 .jobs-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px;}
-.job-card{background:#fff;border-radius:var(--r);border:2px solid transparent;overflow:hidden;transition:all .25s;cursor:pointer;}
+.job-card{background:#fff;border-radius:var(--r);border:2px solid transparent;overflow:hidden;transition:all .25s;}
 .job-card:hover{border-color:var(--blue);box-shadow:0 6px 22px rgba(20,110,180,.15);transform:translateY(-3px);}
 .job-card-top{padding:18px 18px 14px;border-bottom:1px solid var(--border);}
 .job-dept-badge{display:inline-flex;align-items:center;gap:5px;font-size:10px;font-weight:800;padding:3px 10px;border-radius:10px;margin-bottom:10px;text-transform:uppercase;letter-spacing:.1em;}
@@ -254,33 +208,8 @@ body{font-family:'Nunito',sans-serif;background:var(--off);color:var(--text);ove
 .job-footer{display:flex;justify-content:space-between;align-items:center;}
 .job-meta{font-size:11px;color:var(--text2);}
 .job-meta span{display:inline-flex;align-items:center;gap:3px;margin-right:10px;}
-.apply-btn{padding:8px 18px;background:var(--orange);color:#fff;font-size:12px;font-weight:800;border:none;border-radius:5px;cursor:pointer;font-family:'Nunito',sans-serif;transition:all .2s;}
+.apply-btn{padding:8px 18px;background:var(--orange);color:#fff;font-size:12px;font-weight:800;border:none;border-radius:5px;cursor:pointer;font-family:'Nunito',sans-serif;transition:all .2s;text-decoration:none;display:inline-block;}
 .apply-btn:hover{background:var(--orange-l);}
-
-/* ── Apply Modal ── */
-.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:500;align-items:center;justify-content:center;padding:20px;}
-.modal-overlay.open{display:flex;}
-.modal{background:#fff;border-radius:12px;width:100%;max-width:560px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.3);max-height:90vh;overflow-y:auto;}
-.modal-header{background:var(--navy);padding:20px 24px;display:flex;justify-content:space-between;align-items:flex-start;}
-.modal-header h3{font-family:'Bitter',serif;font-size:18px;font-weight:900;color:#fff;}
-.modal-header p{font-size:12px;color:#9aabb8;margin-top:3px;}
-.modal-close{background:none;border:none;color:#fff;font-size:22px;cursor:pointer;line-height:1;padding:0 4px;transition:color .2s;}
-.modal-close:hover{color:var(--orange);}
-.modal-body{padding:24px;}
-.mfg{margin-bottom:12px;}
-.mfg label{display:block;font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:var(--text2);margin-bottom:4px;font-weight:700;}
-.mfg input,.mfg select,.mfg textarea{width:100%;padding:10px 13px;border:2px solid var(--border);border-radius:6px;font-family:'Nunito',sans-serif;font-size:13px;outline:none;transition:border .2s;background:#fafafa;}
-.mfg input:focus,.mfg select:focus,.mfg textarea:focus{border-color:var(--orange);background:#fff;}
-.mfg textarea{resize:none;}
-.mfrow{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
-.upload-box{border:2px dashed var(--border);border-radius:7px;padding:18px;text-align:center;cursor:pointer;transition:all .2s;background:#fafafa;}
-.upload-box:hover{border-color:var(--orange);background:var(--orange-pale);}
-.upload-box p{font-size:12px;color:var(--text2);margin-top:6px;}
-.modal-footer{padding:0 24px 24px;}
-.modal-submit{width:100%;padding:13px;background:var(--orange);border:none;border-radius:6px;color:#fff;font-family:'Nunito',sans-serif;font-size:14px;font-weight:800;cursor:pointer;transition:all .2s;}
-.modal-submit:hover{background:var(--orange-l);}
-
-/* ── FOOTER ── */
 footer{background:var(--navy);color:#fff;padding:36px 24px 18px;}
 .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:28px;margin-bottom:28px;}
 .fb-name{font-family:'Bitter',serif;font-size:24px;font-weight:900;color:var(--orange);margin-bottom:5px;}
@@ -296,12 +225,9 @@ footer{background:var(--navy);color:#fff;padding:36px 24px 18px;}
 .footer-btm{border-top:1px solid #1e2a38;padding-top:16px;display:flex;justify-content:space-between;align-items:center;}
 .footer-copy{font-size:11px;color:#555;}
 .footer-est{font-size:10px;color:#444;font-family:monospace;letter-spacing:.1em;}
-
-/* ── REVEAL ── */
 .reveal{opacity:0;transform:translateY(22px);transition:opacity .5s,transform .5s;}
 .reveal.visible{opacity:1;transform:translateY(0);}
 .rd1{transition-delay:.07s}.rd2{transition-delay:.14s}.rd3{transition-delay:.21s}
-
 @media(max-width:860px){
   .hero-inner,.contact-layout{grid-template-columns:1fr;}
   .hero-stats{flex-direction:row;flex-wrap:wrap;}
@@ -314,44 +240,33 @@ footer{background:var(--navy);color:#fff;padding:36px 24px 18px;}
 </head>
 <body>
 
-<!-- ══ TOP BAR ══ -->
 <div class="topbar">
   <a class="tb-logo" onclick="goPage('home')">
     <span class="lg">vynex</span>
     <span class="ls">overseas · hyd</span>
   </a>
-  <div class="tb-search">
-    <select><option>All</option><option>Study Visa</option><option>Work Permit</option><option>PR</option><option>Coaching</option></select>
-    <input type="text" placeholder="Search destinations, universities, courses...">
-    <button>🔍</button>
-  </div>
   <div class="tb-right">
     <span class="tb-link" onclick="goPage('careers')"><small>Join Our</small>Careers</span>
-    <span class="tb-link" onclick="showSection('contact')"><small>Free</small>Consultation</span>
-    <button class="tb-cta" onclick="showSection('contact')">📋 Book Now</button>
+    <span class="tb-link" onclick="showSection('contact')"><small>Reach Us</small>Contact</span>
   </div>
 </div>
 
-<!-- ══ NAV STRIP ══ -->
 <nav class="navstrip">
   <button class="ns-item active" onclick="goPage('home')">🏠 Home</button>
   <button class="ns-item" onclick="goPage('home');showSection('services')">All Services</button>
-  <button class="ns-item" onclick="goPage('home');openDest('usa')">🇺🇸 USA</button>
-  <button class="ns-item" onclick="goPage('home');openDest('uk')">🇬🇧 UK</button>
-  <button class="ns-item" onclick="goPage('home');openDest('canada')">🇨🇦 Canada</button>
-  <button class="ns-item" onclick="goPage('home');openDest('australia')">🇦🇺 Australia</button>
-  <button class="ns-item" onclick="goPage('home');openDest('germany')">🇩🇪 Germany</button>
-  <button class="ns-item" onclick="goPage('home');openDest('nz')">🇳🇿 New Zealand</button>
+  <button class="ns-item" onclick="goPage('home');openDest('usa')">USA</button>
+  <button class="ns-item" onclick="goPage('home');openDest('uk')">UK</button>
+  <button class="ns-item" onclick="goPage('home');openDest('canada')">Canada</button>
+  <button class="ns-item" onclick="goPage('home');openDest('australia')">Australia</button>
+  <button class="ns-item" onclick="goPage('home');openDest('germany')">Germany</button>
+  <button class="ns-item" onclick="goPage('home');openDest('nz')">New Zealand</button>
   <button class="ns-item" onclick="goPage('home');showSection('process')">How It Works</button>
   <button class="ns-item" onclick="goPage('home');showSection('testimonials')">Success Stories</button>
   <button class="ns-item highlight" onclick="goPage('careers')">🧑‍💼 We're Hiring!</button>
   <button class="ns-item" onclick="showSection('contact')">📞 Contact</button>
 </nav>
 
-<!-- ══════════════ HOME PAGE ══════════════ -->
 <div class="page active" id="page-home">
-
-  <!-- HERO -->
   <section class="hero">
     <div class="hero-shapes"><div class="hs hs1"></div><div class="hs hs2"></div><div class="hs hs3"></div></div>
     <div class="hero-inner">
@@ -373,15 +288,11 @@ footer{background:var(--navy);color:#fff;padding:36px 24px 18px;}
     </div>
   </section>
 
-  <!-- MARQUEE -->
-  <div class="marquee">
-    <div class="mtrack">
-      <div class="mi">Study Abroad</div><div class="mi">Student Visas</div><div class="mi">Work Permits</div><div class="mi">PR Guidance</div><div class="mi">IELTS Coaching</div><div class="mi">University Admissions</div><div class="mi">Spouse Visas</div><div class="mi">Tourist Visas</div><div class="mi">Education Loans</div><div class="mi">Canada PR</div><div class="mi">Australia PR</div><div class="mi">UK Skilled Visa</div>
-      <div class="mi">Study Abroad</div><div class="mi">Student Visas</div><div class="mi">Work Permits</div><div class="mi">PR Guidance</div><div class="mi">IELTS Coaching</div><div class="mi">University Admissions</div><div class="mi">Spouse Visas</div><div class="mi">Tourist Visas</div><div class="mi">Education Loans</div><div class="mi">Canada PR</div><div class="mi">Australia PR</div><div class="mi">UK Skilled Visa</div>
-    </div>
-  </div>
+  <div class="marquee"><div class="mtrack">
+    <div class="mi">Study Abroad</div><div class="mi">Student Visas</div><div class="mi">Work Permits</div><div class="mi">PR Guidance</div><div class="mi">IELTS Coaching</div><div class="mi">University Admissions</div><div class="mi">Spouse Visas</div><div class="mi">Tourist Visas</div><div class="mi">Education Loans</div><div class="mi">Canada PR</div><div class="mi">Australia PR</div><div class="mi">UK Skilled Visa</div>
+    <div class="mi">Study Abroad</div><div class="mi">Student Visas</div><div class="mi">Work Permits</div><div class="mi">PR Guidance</div><div class="mi">IELTS Coaching</div><div class="mi">University Admissions</div><div class="mi">Spouse Visas</div><div class="mi">Tourist Visas</div><div class="mi">Education Loans</div><div class="mi">Canada PR</div><div class="mi">Australia PR</div><div class="mi">UK Skilled Visa</div>
+  </div></div>
 
-  <!-- TRUST BAR -->
   <div class="trustbar">
     <div class="ti"><span>✅</span>RCIC Certified</div>
     <div class="ti"><span>🏛️</span>300+ Universities</div>
@@ -391,7 +302,6 @@ footer{background:var(--navy);color:#fff;padding:36px 24px 18px;}
     <div class="ti"><span>📍</span>Hyderabad · Est. 2019</div>
   </div>
 
-  <!-- BROWSE CATEGORIES -->
   <div class="sec reveal">
     <div class="sec-hdr"><h2>📦 Browse by Category</h2><button onclick="showSection('services')">See all →</button></div>
     <div class="cat-grid">
@@ -406,24 +316,18 @@ footer{background:var(--navy);color:#fff;padding:36px 24px 18px;}
     </div>
   </div>
 
-  <!-- DESTINATIONS -->
   <div class="sec reveal" id="destinations">
     <div class="sec-hdr"><h2>🌍 Where Will You Go?</h2><span style="font-size:12px;color:var(--text2);">Click a country to explore</span></div>
     <div class="dest-tabs">
-      <button class="dtab active" onclick="showDest('usa',this)">🇺🇸 USA</button>
-      <button class="dtab" onclick="showDest('uk',this)">🇬🇧 UK</button>
-      <button class="dtab" onclick="showDest('canada',this)">🇨🇦 Canada</button>
-      <button class="dtab" onclick="showDest('australia',this)">🇦🇺 Australia</button>
-      <button class="dtab" onclick="showDest('germany',this)">🇩🇪 Germany</button>
-      <button class="dtab" onclick="showDest('nz',this)">🇳🇿 New Zealand</button>
+      <button class="dtab active" onclick="showDest('usa',this)">USA</button>
+      <button class="dtab" onclick="showDest('uk',this)">UK</button>
+      <button class="dtab" onclick="showDest('canada',this)">Canada</button>
+      <button class="dtab" onclick="showDest('australia',this)">Australia</button>
+      <button class="dtab" onclick="showDest('germany',this)">Germany</button>
+      <button class="dtab" onclick="showDest('nz',this)">New Zealand</button>
     </div>
-
-    <!-- USA -->
     <div class="dest-panel active" id="dest-usa">
-      <div class="dest-banner" style="background:linear-gradient(135deg,#0a1628,#1a3560,#2a4a80);">
-        <div class="dest-banner-bg">🇺🇸</div><div class="dest-banner-overlay"></div>
-        <div class="dest-banner-info"><div class="dbi-title">United States of America</div><div class="dbi-sub">World's top study destination · Harvard, MIT, Stanford & 4,000+ universities</div><div class="dbi-badges"><span class="dbadge">F-1 Student Visa</span><span class="dbadge">H-1B Work Visa</span><span class="dbadge">OPT / CPT</span><span class="dbadge">J-1 Exchange</span></div></div>
-      </div>
+      <div class="dest-banner" style="background:linear-gradient(135deg,#0a1628,#1a3560,#2a4a80);"><div class="dest-banner-bg">🇺🇸</div><div class="dest-banner-overlay"></div><div class="dest-banner-info"><div class="dbi-title">United States of America</div><div class="dbi-sub">World's top study destination · Harvard, MIT, Stanford & 4,000+ universities</div><div class="dbi-badges"><span class="dbadge">F-1 Student Visa</span><span class="dbadge">H-1B Work Visa</span><span class="dbadge">OPT / CPT</span><span class="dbadge">J-1 Exchange</span></div></div></div>
       <div class="dinfo-grid">
         <div class="dib" style="border-color:var(--blue)"><div class="dib-lbl">Avg Tuition/Year</div><div class="dib-val">$25,000 – $55,000</div></div>
         <div class="dib" style="border-color:var(--green)"><div class="dib-lbl">Living Cost/Year</div><div class="dib-val">$12,000 – $20,000</div></div>
@@ -432,18 +336,7 @@ footer{background:var(--navy);color:#fff;padding:36px 24px 18px;}
         <div class="dib" style="border-color:var(--red)"><div class="dib-lbl">Intake Seasons</div><div class="dib-val">Fall (Sep) · Spring (Jan)</div></div>
         <div class="dib" style="border-color:var(--teal)"><div class="dib-lbl">Language Req.</div><div class="dib-val">TOEFL 80+ / IELTS 6.5+</div></div>
       </div>
-      <div class="courses-box"><div class="cbox-title">🎓 Popular Courses</div>
-        <div class="cpills">
-          <div class="cpill"><span class="cpill-ic">💻</span>Computer Science & AI</div>
-          <div class="cpill"><span class="cpill-ic">📊</span>Data Science & Analytics</div>
-          <div class="cpill"><span class="cpill-ic">⚙️</span>Electrical Engineering</div>
-          <div class="cpill"><span class="cpill-ic">💰</span>MBA / Business Admin</div>
-          <div class="cpill"><span class="cpill-ic">🔬</span>Biotechnology</div>
-          <div class="cpill"><span class="cpill-ic">⚕️</span>Public Health</div>
-          <div class="cpill"><span class="cpill-ic">🎨</span>UX / Design</div>
-          <div class="cpill"><span class="cpill-ic">⚖️</span>Law (LLM)</div>
-        </div>
-      </div>
+      <div class="courses-box"><div class="cbox-title">🎓 Popular Courses</div><div class="cpills"><div class="cpill"><span class="cpill-ic">💻</span>Computer Science & AI</div><div class="cpill"><span class="cpill-ic">📊</span>Data Science & Analytics</div><div class="cpill"><span class="cpill-ic">⚙️</span>Electrical Engineering</div><div class="cpill"><span class="cpill-ic">💰</span>MBA / Business Admin</div><div class="cpill"><span class="cpill-ic">🔬</span>Biotechnology</div><div class="cpill"><span class="cpill-ic">⚕️</span>Public Health</div><div class="cpill"><span class="cpill-ic">🎨</span>UX / Design</div><div class="cpill"><span class="cpill-ic">⚖️</span>Law (LLM)</div></div></div>
       <div class="uni-grid">
         <div class="uni-card"><div class="uni-rank" style="background:var(--blue)">#1<br>QS</div><div><div class="uni-name">Massachusetts Institute of Technology</div><div class="uni-loc">📍 Cambridge, MA</div><div class="uni-tags"><span class="utag" style="background:var(--blue-pale);color:var(--blue)">Engineering</span><span class="utag" style="background:var(--green-pale);color:var(--green)">CS</span></div></div></div>
         <div class="uni-card"><div class="uni-rank" style="background:var(--orange)">#4<br>QS</div><div><div class="uni-name">Stanford University</div><div class="uni-loc">📍 Stanford, CA</div><div class="uni-tags"><span class="utag" style="background:var(--orange-pale);color:var(--orange)">Tech</span><span class="utag" style="background:var(--purple-pale);color:var(--purple)">Business</span></div></div></div>
@@ -460,13 +353,8 @@ footer{background:var(--navy);color:#fff;padding:36px 24px 18px;}
       </div>
       <button class="btn-primary" onclick="showSection('contact')">Apply for USA Student Visa →</button>
     </div>
-
-    <!-- UK -->
     <div class="dest-panel" id="dest-uk">
-      <div class="dest-banner" style="background:linear-gradient(135deg,#0d1e2a,#1a3040,#2a4a60);">
-        <div class="dest-banner-bg">🇬🇧</div><div class="dest-banner-overlay"></div>
-        <div class="dest-banner-info"><div class="dbi-title">United Kingdom</div><div class="dbi-sub">Oxford, Cambridge, Imperial & 130+ world-class universities</div><div class="dbi-badges"><span class="dbadge">Student Visa</span><span class="dbadge">Skilled Worker</span><span class="dbadge">Graduate Route</span></div></div>
-      </div>
+      <div class="dest-banner" style="background:linear-gradient(135deg,#0d1e2a,#1a3040,#2a4a60);"><div class="dest-banner-bg">🇬🇧</div><div class="dest-banner-overlay"></div><div class="dest-banner-info"><div class="dbi-title">United Kingdom</div><div class="dbi-sub">Oxford, Cambridge, Imperial & 130+ world-class universities</div><div class="dbi-badges"><span class="dbadge">Student Visa</span><span class="dbadge">Skilled Worker</span><span class="dbadge">Graduate Route</span></div></div></div>
       <div class="dinfo-grid">
         <div class="dib" style="border-color:var(--blue)"><div class="dib-lbl">Avg Tuition/Year</div><div class="dib-val">£15,000 – £35,000</div></div>
         <div class="dib" style="border-color:var(--green)"><div class="dib-lbl">Living Cost/Year</div><div class="dib-val">£9,000 – £14,000</div></div>
@@ -475,18 +363,7 @@ footer{background:var(--navy);color:#fff;padding:36px 24px 18px;}
         <div class="dib" style="border-color:var(--red)"><div class="dib-lbl">Course Duration</div><div class="dib-val">UG: 3 yrs · PG: 1 yr</div></div>
         <div class="dib" style="border-color:var(--teal)"><div class="dib-lbl">Language Req.</div><div class="dib-val">IELTS 6.0 – 7.0</div></div>
       </div>
-      <div class="courses-box"><div class="cbox-title">🎓 Popular Courses</div>
-        <div class="cpills">
-          <div class="cpill"><span class="cpill-ic">💻</span>Computer Science</div>
-          <div class="cpill"><span class="cpill-ic">💰</span>Finance & Accounting</div>
-          <div class="cpill"><span class="cpill-ic">⚕️</span>Medicine & Nursing</div>
-          <div class="cpill"><span class="cpill-ic">📐</span>Architecture</div>
-          <div class="cpill"><span class="cpill-ic">🔬</span>Pharmacy & Life Sciences</div>
-          <div class="cpill"><span class="cpill-ic">🎭</span>Media & Journalism</div>
-          <div class="cpill"><span class="cpill-ic">🏛️</span>Political Science</div>
-          <div class="cpill"><span class="cpill-ic">📡</span>Telecommunications</div>
-        </div>
-      </div>
+      <div class="courses-box"><div class="cbox-title">🎓 Popular Courses</div><div class="cpills"><div class="cpill"><span class="cpill-ic">💻</span>Computer Science</div><div class="cpill"><span class="cpill-ic">💰</span>Finance & Accounting</div><div class="cpill"><span class="cpill-ic">⚕️</span>Medicine & Nursing</div><div class="cpill"><span class="cpill-ic">📐</span>Architecture</div><div class="cpill"><span class="cpill-ic">🔬</span>Pharmacy & Life Sciences</div><div class="cpill"><span class="cpill-ic">🎭</span>Media & Journalism</div><div class="cpill"><span class="cpill-ic">🏛️</span>Political Science</div><div class="cpill"><span class="cpill-ic">📡</span>Telecommunications</div></div></div>
       <div class="uni-grid">
         <div class="uni-card"><div class="uni-rank" style="background:var(--red)">#2<br>QS</div><div><div class="uni-name">University of Oxford</div><div class="uni-loc">📍 Oxford, England</div><div class="uni-tags"><span class="utag" style="background:var(--red-pale);color:var(--red)">Research</span><span class="utag" style="background:var(--purple-pale);color:var(--purple)">Law</span></div></div></div>
         <div class="uni-card"><div class="uni-rank" style="background:#0d3050">#3<br>QS</div><div><div class="uni-name">University of Cambridge</div><div class="uni-loc">📍 Cambridge, England</div><div class="uni-tags"><span class="utag" style="background:var(--blue-pale);color:var(--blue)">Science</span><span class="utag" style="background:var(--green-pale);color:var(--green)">Maths</span></div></div></div>
@@ -502,13 +379,8 @@ footer{background:var(--navy);color:#fff;padding:36px 24px 18px;}
       </div>
       <button class="btn-primary" onclick="showSection('contact')">Apply for UK Student Visa →</button>
     </div>
-
-    <!-- CANADA -->
     <div class="dest-panel" id="dest-canada">
-      <div class="dest-banner" style="background:linear-gradient(135deg,#2a0a0a,#3a1a1a,#8a1a1a);">
-        <div class="dest-banner-bg">🇨🇦</div><div class="dest-banner-overlay"></div>
-        <div class="dest-banner-info"><div class="dbi-title">Canada</div><div class="dbi-sub">Study · Work · Settle — Most immigrant-friendly destination globally</div><div class="dbi-badges"><span class="dbadge">Study Permit</span><span class="dbadge">PGWP</span><span class="dbadge">Express Entry</span><span class="dbadge">PNP</span></div></div>
-      </div>
+      <div class="dest-banner" style="background:linear-gradient(135deg,#2a0a0a,#3a1a1a,#8a1a1a);"><div class="dest-banner-bg">🇨🇦</div><div class="dest-banner-overlay"></div><div class="dest-banner-info"><div class="dbi-title">Canada</div><div class="dbi-sub">Study · Work · Settle — Most immigrant-friendly destination globally</div><div class="dbi-badges"><span class="dbadge">Study Permit</span><span class="dbadge">PGWP</span><span class="dbadge">Express Entry</span><span class="dbadge">PNP</span></div></div></div>
       <div class="dinfo-grid">
         <div class="dib" style="border-color:var(--red)"><div class="dib-lbl">Avg Tuition/Year</div><div class="dib-val">CAD $18,000 – $35,000</div></div>
         <div class="dib" style="border-color:var(--green)"><div class="dib-lbl">Living Cost/Year</div><div class="dib-val">CAD $12,000 – $18,000</div></div>
@@ -517,18 +389,7 @@ footer{background:var(--navy);color:#fff;padding:36px 24px 18px;}
         <div class="dib" style="border-color:var(--blue)"><div class="dib-lbl">PR Pathway</div><div class="dib-val">Express Entry / PNP</div></div>
         <div class="dib" style="border-color:var(--teal)"><div class="dib-lbl">Language Req.</div><div class="dib-val">IELTS 6.0+ / PTE 58+</div></div>
       </div>
-      <div class="courses-box"><div class="cbox-title">🎓 Popular Courses</div>
-        <div class="cpills">
-          <div class="cpill"><span class="cpill-ic">💻</span>Computer Science / IT</div>
-          <div class="cpill"><span class="cpill-ic">🏥</span>Healthcare Management</div>
-          <div class="cpill"><span class="cpill-ic">🏗️</span>Civil Engineering</div>
-          <div class="cpill"><span class="cpill-ic">💰</span>Accounting & Finance</div>
-          <div class="cpill"><span class="cpill-ic">🧠</span>Artificial Intelligence</div>
-          <div class="cpill"><span class="cpill-ic">🌱</span>Environmental Science</div>
-          <div class="cpill"><span class="cpill-ic">🎓</span>Education (M.Ed)</div>
-          <div class="cpill"><span class="cpill-ic">🏨</span>Hospitality Management</div>
-        </div>
-      </div>
+      <div class="courses-box"><div class="cbox-title">🎓 Popular Courses</div><div class="cpills"><div class="cpill"><span class="cpill-ic">💻</span>Computer Science / IT</div><div class="cpill"><span class="cpill-ic">🏥</span>Healthcare Management</div><div class="cpill"><span class="cpill-ic">🏗️</span>Civil Engineering</div><div class="cpill"><span class="cpill-ic">💰</span>Accounting & Finance</div><div class="cpill"><span class="cpill-ic">🧠</span>Artificial Intelligence</div><div class="cpill"><span class="cpill-ic">🌱</span>Environmental Science</div><div class="cpill"><span class="cpill-ic">🎓</span>Education (M.Ed)</div><div class="cpill"><span class="cpill-ic">🏨</span>Hospitality Management</div></div></div>
       <div class="uni-grid">
         <div class="uni-card"><div class="uni-rank" style="background:var(--red)">#21<br>QS</div><div><div class="uni-name">University of Toronto</div><div class="uni-loc">📍 Toronto, Ontario</div><div class="uni-tags"><span class="utag" style="background:var(--red-pale);color:var(--red)">Research</span><span class="utag" style="background:var(--blue-pale);color:var(--blue)">CS</span></div></div></div>
         <div class="uni-card"><div class="uni-rank" style="background:var(--green)">#30<br>QS</div><div><div class="uni-name">McGill University</div><div class="uni-loc">📍 Montréal, Québec</div><div class="uni-tags"><span class="utag" style="background:var(--green-pale);color:var(--green)">Medicine</span><span class="utag" style="background:var(--purple-pale);color:var(--purple)">Law</span></div></div></div>
@@ -544,13 +405,8 @@ footer{background:var(--navy);color:#fff;padding:36px 24px 18px;}
       </div>
       <button class="btn-primary" onclick="showSection('contact')">Apply for Canada Study Permit →</button>
     </div>
-
-    <!-- AUSTRALIA -->
     <div class="dest-panel" id="dest-australia">
-      <div class="dest-banner" style="background:linear-gradient(135deg,#0d1a0d,#1a3020,#002a1a);">
-        <div class="dest-banner-bg">🇦🇺</div><div class="dest-banner-overlay"></div>
-        <div class="dest-banner-info"><div class="dbi-title">Australia</div><div class="dbi-sub">8 of world's top 100 universities · Clear PR pathway for skilled migrants</div><div class="dbi-badges"><span class="dbadge">Subclass 500</span><span class="dbadge">TSS 482</span><span class="dbadge">189/190 PR</span><span class="dbadge">485 Grad Visa</span></div></div>
-      </div>
+      <div class="dest-banner" style="background:linear-gradient(135deg,#0d1a0d,#1a3020,#002a1a);"><div class="dest-banner-bg">🇦🇺</div><div class="dest-banner-overlay"></div><div class="dest-banner-info"><div class="dbi-title">Australia</div><div class="dbi-sub">8 of world's top 100 universities · Clear PR pathway for skilled migrants</div><div class="dbi-badges"><span class="dbadge">Subclass 500</span><span class="dbadge">TSS 482</span><span class="dbadge">189/190 PR</span><span class="dbadge">485 Grad Visa</span></div></div></div>
       <div class="dinfo-grid">
         <div class="dib" style="border-color:var(--green)"><div class="dib-lbl">Avg Tuition/Year</div><div class="dib-val">AUD $20,000 – $45,000</div></div>
         <div class="dib" style="border-color:var(--blue)"><div class="dib-lbl">Living Cost/Year</div><div class="dib-val">AUD $20,000 – $27,000</div></div>
@@ -559,18 +415,7 @@ footer{background:var(--navy);color:#fff;padding:36px 24px 18px;}
         <div class="dib" style="border-color:var(--red)"><div class="dib-lbl">PR Pathway</div><div class="dib-val">Skilled Independent 189</div></div>
         <div class="dib" style="border-color:var(--teal)"><div class="dib-lbl">Language Req.</div><div class="dib-val">IELTS 6.0 – 7.0</div></div>
       </div>
-      <div class="courses-box"><div class="cbox-title">🎓 Popular Courses</div>
-        <div class="cpills">
-          <div class="cpill"><span class="cpill-ic">⚕️</span>Nursing & Aged Care</div>
-          <div class="cpill"><span class="cpill-ic">💻</span>Information Technology</div>
-          <div class="cpill"><span class="cpill-ic">🏗️</span>Civil & Structural Engineering</div>
-          <div class="cpill"><span class="cpill-ic">🍳</span>Hospitality & Culinary</div>
-          <div class="cpill"><span class="cpill-ic">🔬</span>Pharmacy</div>
-          <div class="cpill"><span class="cpill-ic">📊</span>Accounting (CPA path)</div>
-          <div class="cpill"><span class="cpill-ic">🌱</span>Agriculture & Forestry</div>
-          <div class="cpill"><span class="cpill-ic">🧑‍🏫</span>Teaching & Education</div>
-        </div>
-      </div>
+      <div class="courses-box"><div class="cbox-title">🎓 Popular Courses</div><div class="cpills"><div class="cpill"><span class="cpill-ic">⚕️</span>Nursing & Aged Care</div><div class="cpill"><span class="cpill-ic">💻</span>Information Technology</div><div class="cpill"><span class="cpill-ic">🏗️</span>Civil & Structural Engineering</div><div class="cpill"><span class="cpill-ic">🍳</span>Hospitality & Culinary</div><div class="cpill"><span class="cpill-ic">🔬</span>Pharmacy</div><div class="cpill"><span class="cpill-ic">📊</span>Accounting (CPA path)</div><div class="cpill"><span class="cpill-ic">🌱</span>Agriculture & Forestry</div><div class="cpill"><span class="cpill-ic">🧑‍🏫</span>Teaching & Education</div></div></div>
       <div class="uni-grid">
         <div class="uni-card"><div class="uni-rank" style="background:var(--green)">#33<br>QS</div><div><div class="uni-name">University of Melbourne</div><div class="uni-loc">📍 Melbourne, VIC</div><div class="uni-tags"><span class="utag" style="background:var(--green-pale);color:var(--green)">Medicine</span><span class="utag" style="background:var(--blue-pale);color:var(--blue)">Law</span></div></div></div>
         <div class="uni-card"><div class="uni-rank" style="background:var(--blue)">#40<br>QS</div><div><div class="uni-name">Monash University</div><div class="uni-loc">📍 Melbourne, VIC</div><div class="uni-tags"><span class="utag" style="background:var(--blue-pale);color:var(--blue)">Engineering</span><span class="utag" style="background:var(--yellow-pale);color:var(--yellow)">Business</span></div></div></div>
@@ -586,13 +431,8 @@ footer{background:var(--navy);color:#fff;padding:36px 24px 18px;}
       </div>
       <button class="btn-primary" onclick="showSection('contact')">Apply for Australia Student Visa →</button>
     </div>
-
-    <!-- GERMANY -->
     <div class="dest-panel" id="dest-germany">
-      <div class="dest-banner" style="background:linear-gradient(135deg,#1a1010,#201a10,#101018);">
-        <div class="dest-banner-bg">🇩🇪</div><div class="dest-banner-overlay"></div>
-        <div class="dest-banner-info"><div class="dbi-title">Germany</div><div class="dbi-sub">FREE public university tuition · Engineering powerhouse of Europe</div><div class="dbi-badges"><span class="dbadge">Student Visa §16b</span><span class="dbadge">Job Seeker Visa</span><span class="dbadge">EU Blue Card</span></div></div>
-      </div>
+      <div class="dest-banner" style="background:linear-gradient(135deg,#1a1010,#201a10,#101018);"><div class="dest-banner-bg">🇩🇪</div><div class="dest-banner-overlay"></div><div class="dest-banner-info"><div class="dbi-title">Germany</div><div class="dbi-sub">FREE public university tuition · Engineering powerhouse of Europe</div><div class="dbi-badges"><span class="dbadge">Student Visa §16b</span><span class="dbadge">Job Seeker Visa</span><span class="dbadge">EU Blue Card</span></div></div></div>
       <div class="dinfo-grid">
         <div class="dib" style="border-color:var(--blue)"><div class="dib-lbl">Tuition (Public Uni)</div><div class="dib-val">€0 – €1,500/semester</div></div>
         <div class="dib" style="border-color:var(--green)"><div class="dib-lbl">Living Cost/Month</div><div class="dib-val">€850 – €1,200</div></div>
@@ -601,18 +441,7 @@ footer{background:var(--navy);color:#fff;padding:36px 24px 18px;}
         <div class="dib" style="border-color:var(--red)"><div class="dib-lbl">Language Req.</div><div class="dib-val">B2/C1 German or IELTS 6.5</div></div>
         <div class="dib" style="border-color:var(--teal)"><div class="dib-lbl">Blocked Account</div><div class="dib-val">€11,208/year</div></div>
       </div>
-      <div class="courses-box"><div class="cbox-title">🎓 Popular Courses</div>
-        <div class="cpills">
-          <div class="cpill"><span class="cpill-ic">⚙️</span>Mechanical Engineering</div>
-          <div class="cpill"><span class="cpill-ic">🚗</span>Automotive Engineering</div>
-          <div class="cpill"><span class="cpill-ic">💻</span>Computer Science (MINT)</div>
-          <div class="cpill"><span class="cpill-ic">🔌</span>Electrical Engineering</div>
-          <div class="cpill"><span class="cpill-ic">🧪</span>Chemistry & Physics</div>
-          <div class="cpill"><span class="cpill-ic">💰</span>Business Administration</div>
-          <div class="cpill"><span class="cpill-ic">🏗️</span>Architecture</div>
-          <div class="cpill"><span class="cpill-ic">🧬</span>Biotechnology</div>
-        </div>
-      </div>
+      <div class="courses-box"><div class="cbox-title">🎓 Popular Courses</div><div class="cpills"><div class="cpill"><span class="cpill-ic">⚙️</span>Mechanical Engineering</div><div class="cpill"><span class="cpill-ic">🚗</span>Automotive Engineering</div><div class="cpill"><span class="cpill-ic">💻</span>Computer Science (MINT)</div><div class="cpill"><span class="cpill-ic">🔌</span>Electrical Engineering</div><div class="cpill"><span class="cpill-ic">🧪</span>Chemistry & Physics</div><div class="cpill"><span class="cpill-ic">💰</span>Business Administration</div><div class="cpill"><span class="cpill-ic">🏗️</span>Architecture</div><div class="cpill"><span class="cpill-ic">🧬</span>Biotechnology</div></div></div>
       <div class="uni-grid">
         <div class="uni-card"><div class="uni-rank" style="background:var(--blue)">#57<br>QS</div><div><div class="uni-name">TU Munich</div><div class="uni-loc">📍 Munich, Bavaria</div><div class="uni-tags"><span class="utag" style="background:var(--blue-pale);color:var(--blue)">Engineering</span><span class="utag" style="background:var(--green-pale);color:var(--green)">Tech</span></div></div></div>
         <div class="uni-card"><div class="uni-rank" style="background:var(--red)">#63<br>QS</div><div><div class="uni-name">LMU Munich</div><div class="uni-loc">📍 Munich, Bavaria</div><div class="uni-tags"><span class="utag" style="background:var(--red-pale);color:var(--red)">Medicine</span><span class="utag" style="background:var(--purple-pale);color:var(--purple)">Science</span></div></div></div>
@@ -628,13 +457,8 @@ footer{background:var(--navy);color:#fff;padding:36px 24px 18px;}
       </div>
       <button class="btn-primary" onclick="showSection('contact')">Apply for Germany Student Visa →</button>
     </div>
-
-    <!-- NEW ZEALAND -->
     <div class="dest-panel" id="dest-nz">
-      <div class="dest-banner" style="background:linear-gradient(135deg,#0d1a2a,#1a2a3a,#003040);">
-        <div class="dest-banner-bg">🇳🇿</div><div class="dest-banner-overlay"></div>
-        <div class="dest-banner-info"><div class="dbi-title">New Zealand</div><div class="dbi-sub">Safe, welcoming & ranked top 10 for quality of life</div><div class="dbi-badges"><span class="dbadge">Student Visa</span><span class="dbadge">Post-Study OWV</span><span class="dbadge">Skilled Migrant PR</span></div></div>
-      </div>
+      <div class="dest-banner" style="background:linear-gradient(135deg,#0d1a2a,#1a2a3a,#003040);"><div class="dest-banner-bg">🇳🇿</div><div class="dest-banner-overlay"></div><div class="dest-banner-info"><div class="dbi-title">New Zealand</div><div class="dbi-sub">Safe, welcoming & ranked top 10 for quality of life</div><div class="dbi-badges"><span class="dbadge">Student Visa</span><span class="dbadge">Post-Study OWV</span><span class="dbadge">Skilled Migrant PR</span></div></div></div>
       <div class="dinfo-grid">
         <div class="dib" style="border-color:var(--teal)"><div class="dib-lbl">Avg Tuition/Year</div><div class="dib-val">NZD $22,000 – $38,000</div></div>
         <div class="dib" style="border-color:var(--green)"><div class="dib-lbl">Living Cost/Year</div><div class="dib-val">NZD $15,000 – $22,000</div></div>
@@ -643,18 +467,7 @@ footer{background:var(--navy);color:#fff;padding:36px 24px 18px;}
         <div class="dib" style="border-color:var(--red)"><div class="dib-lbl">PR Pathway</div><div class="dib-val">Skilled Migrant Category</div></div>
         <div class="dib" style="border-color:var(--blue)"><div class="dib-lbl">Language Req.</div><div class="dib-val">IELTS 6.0+</div></div>
       </div>
-      <div class="courses-box"><div class="cbox-title">🎓 Popular Courses</div>
-        <div class="cpills">
-          <div class="cpill"><span class="cpill-ic">🌱</span>Agriculture & Horticulture</div>
-          <div class="cpill"><span class="cpill-ic">💻</span>ICT & Software Engineering</div>
-          <div class="cpill"><span class="cpill-ic">⚕️</span>Nursing & Health Sciences</div>
-          <div class="cpill"><span class="cpill-ic">🍳</span>Tourism & Hospitality</div>
-          <div class="cpill"><span class="cpill-ic">🔬</span>Environmental Science</div>
-          <div class="cpill"><span class="cpill-ic">💰</span>Finance & Economics</div>
-          <div class="cpill"><span class="cpill-ic">🎨</span>Creative Technologies</div>
-          <div class="cpill"><span class="cpill-ic">🏘️</span>Urban Planning</div>
-        </div>
-      </div>
+      <div class="courses-box"><div class="cbox-title">🎓 Popular Courses</div><div class="cpills"><div class="cpill"><span class="cpill-ic">🌱</span>Agriculture & Horticulture</div><div class="cpill"><span class="cpill-ic">💻</span>ICT & Software Engineering</div><div class="cpill"><span class="cpill-ic">⚕️</span>Nursing & Health Sciences</div><div class="cpill"><span class="cpill-ic">🍳</span>Tourism & Hospitality</div><div class="cpill"><span class="cpill-ic">🔬</span>Environmental Science</div><div class="cpill"><span class="cpill-ic">💰</span>Finance & Economics</div><div class="cpill"><span class="cpill-ic">🎨</span>Creative Technologies</div><div class="cpill"><span class="cpill-ic">🏘️</span>Urban Planning</div></div></div>
       <div class="uni-grid">
         <div class="uni-card"><div class="uni-rank" style="background:var(--teal)">#65<br>QS</div><div><div class="uni-name">University of Auckland</div><div class="uni-loc">📍 Auckland</div><div class="uni-tags"><span class="utag" style="background:var(--teal-pale);color:var(--teal)">Engineering</span><span class="utag" style="background:var(--green-pale);color:var(--green)">Business</span></div></div></div>
         <div class="uni-card"><div class="uni-rank" style="background:var(--green)">#173<br>QS</div><div><div class="uni-name">University of Otago</div><div class="uni-loc">📍 Dunedin</div><div class="uni-tags"><span class="utag" style="background:var(--green-pale);color:var(--green)">Medicine</span><span class="utag" style="background:var(--orange-pale);color:var(--orange)">Science</span></div></div></div>
@@ -672,7 +485,6 @@ footer{background:var(--navy);color:#fff;padding:36px 24px 18px;}
     </div>
   </div>
 
-  <!-- SERVICES -->
   <div class="sec reveal" id="services">
     <div class="sec-hdr"><h2>🎯 Our Services</h2><button onclick="showSection('contact')">Get Free Guidance →</button></div>
     <div class="svc-grid">
@@ -685,7 +497,6 @@ footer{background:var(--navy);color:#fff;padding:36px 24px 18px;}
     </div>
   </div>
 
-  <!-- DEALS -->
   <div class="sec reveal">
     <div class="sec-hdr"><h2>🔥 Special Offers</h2><button onclick="showSection('contact')">Claim Now →</button></div>
     <div class="deals-grid">
@@ -697,7 +508,6 @@ footer{background:var(--navy);color:#fff;padding:36px 24px 18px;}
     </div>
   </div>
 
-  <!-- PROCESS -->
   <div class="sec reveal" id="process">
     <div class="sec-hdr"><h2>⚡ How It Works</h2></div>
     <div class="proc-grid">
@@ -710,53 +520,32 @@ footer{background:var(--navy);color:#fff;padding:36px 24px 18px;}
     </div>
   </div>
 
-  <!-- TESTIMONIALS -->
   <div class="sec reveal" id="testimonials">
     <div class="sec-hdr"><h2>⭐ Success Stories</h2></div>
     <div class="testi-grid">
       <div class="testi-card"><div class="t-stars">★★★★★</div><p class="t-text">"The Vynex team guided me throughout the entire admission process. I received my Australia student visa without any issues."</p><div class="t-author"><div class="t-av" style="background:var(--orange)">S</div><div><div class="t-name">Sandeep Reddy</div><div class="t-role">MBA, University of Sydney</div></div></div></div>
-
-<div class="testi-card"><div class="t-stars">★★★★★</div><p class="t-text">"Their SOP and university selection support helped me secure admission into my dream university in Canada."</p><div class="t-author"><div class="t-av" style="background:var(--blue)">K</div><div><div class="t-name">Kavya Goud</div><div class="t-role">MSc Business Analytics, UBC</div></div></div></div>
-
-<div class="testi-card"><div class="t-stars">★★★★★</div><p class="t-text">"I was confused about my visa documentation. Vynex handled everything professionally and my visa was approved."</p><div class="t-author"><div class="t-av" style="background:var(--green)">V</div><div><div class="t-name">Vamshi Krishna</div><div class="t-role">MS Computer Science, Arizona State University</div></div></div></div>
-
-<div class="testi-card"><div class="t-stars">★★★★★</div><p class="t-text">"Excellent guidance from university applications to accommodation support. Highly recommended."</p><div class="t-author"><div class="t-av" style="background:var(--orange)">P</div><div><div class="t-name">Pooja Reddy</div><div class="t-role">BSc Nursing, University of Auckland</div></div></div></div>
-
-<div class="testi-card"><div class="t-stars">★★★★★</div><p class="t-text">"The IELTS preparation classes were extremely helpful. I achieved my target score in one attempt."</p><div class="t-author"><div class="t-av" style="background:var(--blue)">R</div><div><div class="t-name">Rajesh Goud</div><div class="t-role">MEng Civil Engineering, University of Leeds</div></div></div></div>
-
-<div class="testi-card"><div class="t-stars">★★★★★</div><p class="t-text">"My Canada study permit was approved quickly. The team was available whenever I had questions."</p><div class="t-author"><div class="t-av" style="background:var(--green)">N</div><div><div class="t-name">Niharika Reddy</div><div class="t-role">MSc Healthcare Management, McMaster University</div></div></div></div>
-
-<div class="testi-card"><div class="t-stars">★★★★★</div><p class="t-text">"They made the entire process stress-free and transparent. I am grateful for their support."</p><div class="t-author"><div class="t-av" style="background:var(--orange)">A</div><div><div class="t-name">Arjun Patel</div><div class="t-role">MBA, University of Birmingham</div></div></div></div>
-
-<div class="testi-card"><div class="t-stars">★★★★★</div><p class="t-text">"Received admission offers from multiple universities. Their counseling was outstanding."</p><div class="t-author"><div class="t-av" style="background:var(--blue)">S</div><div><div class="t-name">Sneha Sharma</div><div class="t-role">MSc Finance, University of Manchester</div></div></div></div>
-
-<div class="testi-card"><div class="t-stars">★★★★★</div><p class="t-text">"The visa interview preparation gave me confidence and helped me succeed on my first attempt."</p><div class="t-author"><div class="t-av" style="background:var(--green)">M</div><div><div class="t-name">Mahesh Reddy</div><div class="t-role">MS Data Analytics, University of Texas Dallas</div></div></div></div>
-
-<div class="testi-card"><div class="t-stars">★★★★★</div><p class="t-text">"Professional consultants and quick responses. Highly recommended for study abroad aspirants."</p><div class="t-author"><div class="t-av" style="background:var(--orange)">D</div><div><div class="t-name">Divya Goud</div><div class="t-role">Master of Public Health, Monash University</div></div></div></div>
-
-<div class="testi-card"><div class="t-stars">★★★★★</div><p class="t-text">"I secured a scholarship and admission thanks to the guidance I received from Vynex."</p><div class="t-author"><div class="t-av" style="background:var(--blue)">H</div><div><div class="t-name">Harish Reddy</div><div class="t-role">MS Artificial Intelligence, University of Alberta</div></div></div></div>
-
-<div class="testi-card"><div class="t-stars">★★★★★</div><p class="t-text">"The consultants were knowledgeable and always available to answer my questions."</p><div class="t-author"><div class="t-av" style="background:var(--green)">N</div><div><div class="t-name">Neha Gupta</div><div class="t-role">MSc Biotechnology, University of Nottingham</div></div></div></div>
-
-<div class="testi-card"><div class="t-stars">★★★★★</div><p class="t-text">"Their university shortlisting process matched my goals perfectly. Very satisfied."</p><div class="t-author"><div class="t-av" style="background:var(--orange)">K</div><div><div class="t-name">Kiran Kumar Reddy</div><div class="t-role">MS Information Systems, Northeastern University</div></div></div></div>
-
-<div class="testi-card"><div class="t-stars">★★★★★</div><p class="t-text">"Every step was explained clearly. My UK student visa was approved without complications."</p><div class="t-author"><div class="t-av" style="background:var(--blue)">R</div><div><div class="t-name">Ritika Singh</div><div class="t-role">MSc Marketing, University of Bristol</div></div></div></div>
-
-<div class="testi-card"><div class="t-stars">★★★★★</div><p class="t-text">"Great experience from start to finish. Their support made the process smooth."</p><div class="t-author"><div class="t-av" style="background:var(--green)">S</div><div><div class="t-name">Srikanth Goud</div><div class="t-role">MBA, Deakin University</div></div></div></div>
-
-<div class="testi-card"><div class="t-stars">★★★★★</div><p class="t-text">"I received multiple admits and chose the best option with the help of Vynex."</p><div class="t-author"><div class="t-av" style="background:var(--orange)">P</div><div><div class="t-name">Pallavi Reddy</div><div class="t-role">MS Cybersecurity, George Mason University</div></div></div></div>
-
-<div class="testi-card"><div class="t-stars">★★★★★</div><p class="t-text">"The visa file preparation was perfect. My application was approved quickly."</p><div class="t-author"><div class="t-av" style="background:var(--blue)">A</div><div><div class="t-name">Amit Verma</div><div class="t-role">Software Engineer, Toronto, Canada</div></div></div></div>
-
-<div class="testi-card"><div class="t-stars">★★★★★</div><p class="t-text">"Very supportive team and transparent process. I would definitely recommend them."</p><div class="t-author"><div class="t-av" style="background:var(--green)">L</div><div><div class="t-name">Lakshmi Reddy</div><div class="t-role">MSc Psychology, University of Melbourne</div></div></div></div>
-
-<div class="testi-card"><div class="t-stars">★★★★★</div><p class="t-text">"They helped me secure admission and guided me through every stage of the visa process."</p><div class="t-author"><div class="t-av" style="background:var(--orange)">Y</div><div><div class="t-name">Yashwanth Goud</div><div class="t-role">MS Engineering Management, University of Windsor</div></div></div></div>
-
-<div class="testi-card"><div class="t-stars">★★★★★</div><p class="t-text">"Outstanding service and attention to detail. My dream of studying abroad became a reality."</p><div class="t-author"><div class="t-av" style="background:var(--blue)">S</div><div><div class="t-name">Shreya Agarwal</div><div class="t-role">MSc Data Science, University of Edinburgh</div></div></div></div>
+      <div class="testi-card"><div class="t-stars">★★★★★</div><p class="t-text">"Their SOP and university selection support helped me secure admission into my dream university in Canada."</p><div class="t-author"><div class="t-av" style="background:var(--blue)">K</div><div><div class="t-name">Kavya Goud</div><div class="t-role">MSc Business Analytics, UBC</div></div></div></div>
+      <div class="testi-card"><div class="t-stars">★★★★★</div><p class="t-text">"I was confused about my visa documentation. Vynex handled everything professionally and my visa was approved."</p><div class="t-author"><div class="t-av" style="background:var(--green)">V</div><div><div class="t-name">Vamshi Krishna</div><div class="t-role">MS Computer Science, Arizona State University</div></div></div></div>
+      <div class="testi-card"><div class="t-stars">★★★★★</div><p class="t-text">"Excellent guidance from university applications to accommodation support. Highly recommended."</p><div class="t-author"><div class="t-av" style="background:var(--orange)">P</div><div><div class="t-name">Pooja Reddy</div><div class="t-role">BSc Nursing, University of Auckland</div></div></div></div>
+      <div class="testi-card"><div class="t-stars">★★★★★</div><p class="t-text">"The IELTS preparation classes were extremely helpful. I achieved my target score in one attempt."</p><div class="t-author"><div class="t-av" style="background:var(--blue)">R</div><div><div class="t-name">Rajesh Goud</div><div class="t-role">MEng Civil Engineering, University of Leeds</div></div></div></div>
+      <div class="testi-card"><div class="t-stars">★★★★★</div><p class="t-text">"My Canada study permit was approved quickly. The team was available whenever I had questions."</p><div class="t-author"><div class="t-av" style="background:var(--green)">N</div><div><div class="t-name">Niharika Reddy</div><div class="t-role">MSc Healthcare Management, McMaster University</div></div></div></div>
+      <div class="testi-card"><div class="t-stars">★★★★★</div><p class="t-text">"They made the entire process stress-free and transparent. I am grateful for their support."</p><div class="t-author"><div class="t-av" style="background:var(--orange)">A</div><div><div class="t-name">Arjun Patel</div><div class="t-role">MBA, University of Birmingham</div></div></div></div>
+      <div class="testi-card"><div class="t-stars">★★★★★</div><p class="t-text">"Received admission offers from multiple universities. Their counseling was outstanding."</p><div class="t-author"><div class="t-av" style="background:var(--blue)">S</div><div><div class="t-name">Sneha Sharma</div><div class="t-role">MSc Finance, University of Manchester</div></div></div></div>
+      <div class="testi-card"><div class="t-stars">★★★★★</div><p class="t-text">"The visa interview preparation gave me confidence and helped me succeed on my first attempt."</p><div class="t-author"><div class="t-av" style="background:var(--green)">M</div><div><div class="t-name">Mahesh Reddy</div><div class="t-role">MS Data Analytics, University of Texas Dallas</div></div></div></div>
+      <div class="testi-card"><div class="t-stars">★★★★★</div><p class="t-text">"Professional consultants and quick responses. Highly recommended for study abroad aspirants."</p><div class="t-author"><div class="t-av" style="background:var(--orange)">D</div><div><div class="t-name">Divya Goud</div><div class="t-role">Master of Public Health, Monash University</div></div></div></div>
+      <div class="testi-card"><div class="t-stars">★★★★★</div><p class="t-text">"I secured a scholarship and admission thanks to the guidance I received from Vynex."</p><div class="t-author"><div class="t-av" style="background:var(--blue)">H</div><div><div class="t-name">Harish Reddy</div><div class="t-role">MS Artificial Intelligence, University of Alberta</div></div></div></div>
+      <div class="testi-card"><div class="t-stars">★★★★★</div><p class="t-text">"The consultants were knowledgeable and always available to answer my questions."</p><div class="t-author"><div class="t-av" style="background:var(--green)">N</div><div><div class="t-name">Neha Gupta</div><div class="t-role">MSc Biotechnology, University of Nottingham</div></div></div></div>
+      <div class="testi-card"><div class="t-stars">★★★★★</div><p class="t-text">"Their university shortlisting process matched my goals perfectly. Very satisfied."</p><div class="t-author"><div class="t-av" style="background:var(--orange)">K</div><div><div class="t-name">Kiran Kumar Reddy</div><div class="t-role">MS Information Systems, Northeastern University</div></div></div></div>
+      <div class="testi-card"><div class="t-stars">★★★★★</div><p class="t-text">"Every step was explained clearly. My UK student visa was approved without complications."</p><div class="t-author"><div class="t-av" style="background:var(--blue)">R</div><div><div class="t-name">Ritika Singh</div><div class="t-role">MSc Marketing, University of Bristol</div></div></div></div>
+      <div class="testi-card"><div class="t-stars">★★★★★</div><p class="t-text">"Great experience from start to finish. Their support made the process smooth."</p><div class="t-author"><div class="t-av" style="background:var(--green)">S</div><div><div class="t-name">Srikanth Goud</div><div class="t-role">MBA, Deakin University</div></div></div></div>
+      <div class="testi-card"><div class="t-stars">★★★★★</div><p class="t-text">"I received multiple admits and chose the best option with the help of Vynex."</p><div class="t-author"><div class="t-av" style="background:var(--orange)">P</div><div><div class="t-name">Pallavi Reddy</div><div class="t-role">MS Cybersecurity, George Mason University</div></div></div></div>
+      <div class="testi-card"><div class="t-stars">★★★★★</div><p class="t-text">"The visa file preparation was perfect. My application was approved quickly."</p><div class="t-author"><div class="t-av" style="background:var(--blue)">A</div><div><div class="t-name">Amit Verma</div><div class="t-role">Software Engineer, Toronto, Canada</div></div></div></div>
+      <div class="testi-card"><div class="t-stars">★★★★★</div><p class="t-text">"Very supportive team and transparent process. I would definitely recommend them."</p><div class="t-author"><div class="t-av" style="background:var(--green)">L</div><div><div class="t-name">Lakshmi Reddy</div><div class="t-role">MSc Psychology, University of Melbourne</div></div></div></div>
+      <div class="testi-card"><div class="t-stars">★★★★★</div><p class="t-text">"They helped me secure admission and guided me through every stage of the visa process."</p><div class="t-author"><div class="t-av" style="background:var(--orange)">Y</div><div><div class="t-name">Yashwanth Goud</div><div class="t-role">MS Engineering Management, University of Windsor</div></div></div></div>
+      <div class="testi-card"><div class="t-stars">★★★★★</div><p class="t-text">"Outstanding service and attention to detail. My dream of studying abroad became a reality."</p><div class="t-author"><div class="t-av" style="background:var(--blue)">S</div><div><div class="t-name">Shreya Agarwal</div><div class="t-role">MSc Data Science, University of Edinburgh</div></div></div></div>
     </div>
   </div>
 
-  <!-- CTA BANNER -->
   <div class="sec reveal">
     <div class="cta-banner">
       <div><h2>Ready to Study Abroad? Let's Talk.</h2><p>Book a free 30-min session with our expert counsellors — no commitment required.</p></div>
@@ -764,7 +553,7 @@ footer{background:var(--navy);color:#fff;padding:36px 24px 18px;}
     </div>
   </div>
 
-  <!-- CONTACT -->
+  <!-- CONTACT — with mandatory validation -->
   <div class="sec reveal" id="contact">
     <div class="sec-hdr"><h2>📬 Get In Touch</h2></div>
     <div class="contact-layout">
@@ -782,28 +571,68 @@ footer{background:var(--navy);color:#fff;padding:36px 24px 18px;}
       <div class="cform">
         <div class="cform-title">Send Your Enquiry</div>
         <div class="frow">
-          <div class="fg"><label>First Name</label><input type="text" placeholder="e.g. Rahul"></div>
-          <div class="fg"><label>Last Name</label><input type="text" placeholder="e.g. Sharma"></div>
+          <div class="fg">
+            <label>First Name <span style="color:var(--red)">*</span></label>
+            <input type="text" id="eq-fname" placeholder="e.g. Rahul">
+            <span class="err-msg" id="err-fname">Please enter your first name.</span>
+          </div>
+          <div class="fg">
+            <label>Last Name <span style="color:var(--red)">*</span></label>
+            <input type="text" id="eq-lname" placeholder="e.g. Sharma">
+            <span class="err-msg" id="err-lname">Please enter your last name.</span>
+          </div>
         </div>
-        <div class="fg"><label>Email</label><input type="email" placeholder="you@email.com"></div>
-        <div class="fg"><label>Phone</label><input type="tel" placeholder="+91 XXXXX XXXXX"></div>
+        <div class="fg">
+          <label>Email <span style="color:var(--red)">*</span></label>
+          <input type="email" id="eq-email" placeholder="you@email.com">
+          <span class="err-msg" id="err-email">Please enter a valid email address.</span>
+        </div>
+        <div class="fg">
+          <label>Phone <span style="color:var(--red)">*</span></label>
+          <input type="tel" id="eq-phone" placeholder="+91 XXXXX XXXXX">
+          <span class="err-msg" id="err-phone">Please enter your phone number.</span>
+        </div>
         <div class="frow">
-          <div class="fg"><label>Service</label><select><option value="">Select service</option><option>Student Visa</option><option>University Admissions</option><option>PR / Immigration</option><option>Work Permit</option><option>IELTS / PTE Coaching</option><option>Tourist Visa</option></select></div>
-          <div class="fg"><label>Destination</label><select><option value="">Select country</option><option>USA</option><option>United Kingdom</option><option>Canada</option><option>Australia</option><option>Germany</option><option>New Zealand</option></select></div>
+          <div class="fg">
+            <label>Service <span style="color:var(--red)">*</span></label>
+            <select id="eq-service">
+              <option value="">Select service</option>
+              <option>Student Visa</option>
+              <option>University Admissions</option>
+              <option>PR / Immigration</option>
+              <option>Work Permit</option>
+              <option>IELTS / PTE Coaching</option>
+              <option>Tourist Visa</option>
+            </select>
+            <span class="err-msg" id="err-service">Please select a service.</span>
+          </div>
+          <div class="fg">
+            <label>Destination <span style="color:var(--red)">*</span></label>
+            <select id="eq-dest">
+              <option value="">Select country</option>
+              <option>USA</option>
+              <option>United Kingdom</option>
+              <option>Canada</option>
+              <option>Australia</option>
+              <option>Germany</option>
+              <option>New Zealand</option>
+            </select>
+            <span class="err-msg" id="err-dest">Please select a destination.</span>
+          </div>
         </div>
-        <div class="fg"><label>Your Goals</label><textarea rows="3" placeholder="Tell us about your background and goals..."></textarea></div>
+        <div class="fg">
+          <label>Your Goals <span style="color:var(--red)">*</span></label>
+          <textarea rows="3" id="eq-goals" placeholder="Tell us about your background and goals..."></textarea>
+          <span class="err-msg" id="err-goals">Please tell us about your goals.</span>
+        </div>
         <button class="submit-btn" onclick="submitEnquiry(this)">Send Enquiry — It's Free! →</button>
       </div>
     </div>
   </div>
 </div>
-<!-- ══ END HOME PAGE ══ -->
 
-
-<!-- ══════════════ CAREERS PAGE ══════════════ -->
+<!-- CAREERS PAGE -->
 <div class="page" id="page-careers">
-
-  <!-- Careers Hero -->
   <div class="careers-hero">
     <div class="careers-hero-inner">
       <div class="ch-tag"><span></span>Now Hiring — Hyderabad</div>
@@ -819,8 +648,6 @@ footer{background:var(--navy);color:#fff;padding:36px 24px 18px;}
       </div>
     </div>
   </div>
-
-  <!-- Culture -->
   <div class="sec reveal">
     <div class="sec-hdr"><h2>🌟 Why Work at Vynex?</h2></div>
     <div class="culture-grid">
@@ -832,12 +659,15 @@ footer{background:var(--navy);color:#fff;padding:36px 24px 18px;}
       <div class="culture-card" style="border-bottom-color:var(--red)"><div class="cc2-icon">❤️</div><div class="cc2-title">Meaningful Work</div><div class="cc2-desc">Every day you help someone achieve their dream of studying or working abroad. That matters.</div></div>
     </div>
   </div>
-
-  <!-- Job Listings -->
   <div class="sec reveal">
     <div class="sec-hdr"><h2>📋 Open Positions</h2><span style="font-size:12px;color:var(--text2)">Hyderabad, India · Updated June 2025</span></div>
-
-    <!-- Filter bar -->
+    <div style="background:var(--blue-pale);border:1px solid var(--blue);border-radius:var(--r);padding:14px 18px;margin-bottom:18px;display:flex;align-items:center;gap:12px;">
+      <span style="font-size:22px">📧</span>
+      <div>
+        <div style="font-size:13px;font-weight:800;color:var(--navy)">To apply, send your resume to <a href="mailto:hr@vynex.com" style="color:var(--blue)">hr@vynex.com</a></div>
+        <div style="font-size:12px;color:var(--text2);margin-top:2px">Mention the job title in the subject line. Our HR team responds within 48 hours.</div>
+      </div>
+    </div>
     <div class="filter-bar">
       <button class="filter-btn active" onclick="filterJobs('all',this)">All Roles</button>
       <button class="filter-btn" onclick="filterJobs('design',this)">🎨 Design</button>
@@ -847,311 +677,81 @@ footer{background:var(--navy);color:#fff;padding:36px 24px 18px;}
       <button class="filter-btn" onclick="filterJobs('ops',this)">⚙️ Operations</button>
       <button class="filter-btn" onclick="filterJobs('sales',this)">📣 Sales</button>
     </div>
-
     <div class="jobs-grid" id="jobs-grid">
-
-      <!-- UI/UX Designer -->
       <div class="job-card" data-dept="design">
-        <div class="job-card-top">
-          <div class="job-dept-badge" style="background:var(--purple-pale);color:var(--purple)">🎨 Design</div>
-          <div class="job-title">UI/UX Designer</div>
-          <div class="job-sub">Create stunning digital experiences for our website, student portals & marketing materials</div>
-        </div>
-        <div class="job-card-body">
-          <div class="job-tags">
-            <span class="jtag" style="background:var(--purple-pale);color:var(--purple)">Figma</span>
-            <span class="jtag" style="background:var(--blue-pale);color:var(--blue)">Adobe XD</span>
-            <span class="jtag" style="background:var(--green-pale);color:var(--green)">Full-time</span>
-            <span class="jtag" style="background:var(--orange-pale);color:var(--orange)">Hyderabad</span>
-          </div>
-          <div class="job-desc">We're looking for a creative UI/UX designer to own our digital visual identity. You'll design web pages, student journey flows, social media creatives, and pitch decks. 2+ years experience in Figma required.</div>
-          <div class="job-footer">
-            <div class="job-meta">
-              <span>📍 Hyderabad</span>
-              <span>💰 ₹4–8 LPA</span>
-              <span>⏱ Full-time</span>
-            </div>
-            <button class="apply-btn" onclick="openModal('UI/UX Designer','Design')">Apply Now</button>
-          </div>
-        </div>
+        <div class="job-card-top"><div class="job-dept-badge" style="background:var(--purple-pale);color:var(--purple)">🎨 Design</div><div class="job-title">UI/UX Designer</div><div class="job-sub">Create stunning digital experiences for our website, student portals & marketing materials</div></div>
+        <div class="job-card-body"><div class="job-tags"><span class="jtag" style="background:var(--purple-pale);color:var(--purple)">Figma</span><span class="jtag" style="background:var(--blue-pale);color:var(--blue)">Adobe XD</span><span class="jtag" style="background:var(--green-pale);color:var(--green)">Full-time</span><span class="jtag" style="background:var(--orange-pale);color:var(--orange)">Hyderabad</span></div><div class="job-desc">We're looking for a creative UI/UX designer to own our digital visual identity. You'll design web pages, student journey flows, social media creatives, and pitch decks. 2+ years experience in Figma required.</div><div class="job-footer"><div class="job-meta"><span>📍 Hyderabad</span><span>💰 ₹4–8 LPA</span><span>⏱ Full-time</span></div><a class="apply-btn" href="mailto:hr@vynex.com?subject=Application - UI/UX Designer">Send Resume</a></div></div>
       </div>
-
-      <!-- IELTS Coach -->
       <div class="job-card" data-dept="coaching">
-        <div class="job-card-top">
-          <div class="job-dept-badge" style="background:var(--yellow-pale);color:var(--yellow)">📚 Coaching</div>
-          <div class="job-title">IELTS Coach</div>
-          <div class="job-sub">Train students to achieve 7+ band scores through structured coaching at our Hyderabad centre</div>
-        </div>
-        <div class="job-card-body">
-          <div class="job-tags">
-            <span class="jtag" style="background:var(--yellow-pale);color:var(--yellow)">IELTS Certified</span>
-            <span class="jtag" style="background:var(--green-pale);color:var(--green)">Full-time</span>
-            <span class="jtag" style="background:var(--orange-pale);color:var(--orange)">Hyderabad</span>
-          </div>
-          <div class="job-desc">Deliver engaging IELTS batch and one-on-one coaching sessions. Develop custom study plans, conduct mock tests, and guide students toward 7+ band scores. British Council or IDP certification preferred.</div>
-          <div class="job-footer">
-            <div class="job-meta">
-              <span>📍 Hyderabad</span>
-              <span>💰 ₹3.5–6 LPA</span>
-              <span>⏱ Full-time</span>
-            </div>
-            <button class="apply-btn" onclick="openModal('IELTS Coach','Coaching')">Apply Now</button>
-          </div>
-        </div>
+        <div class="job-card-top"><div class="job-dept-badge" style="background:var(--yellow-pale);color:var(--yellow)">📚 Coaching</div><div class="job-title">IELTS Coach</div><div class="job-sub">Train students to achieve 7+ band scores through structured coaching at our Hyderabad centre</div></div>
+        <div class="job-card-body"><div class="job-tags"><span class="jtag" style="background:var(--yellow-pale);color:var(--yellow)">IELTS Certified</span><span class="jtag" style="background:var(--green-pale);color:var(--green)">Full-time</span><span class="jtag" style="background:var(--orange-pale);color:var(--orange)">Hyderabad</span></div><div class="job-desc">Deliver engaging IELTS batch and one-on-one coaching sessions. Develop custom study plans, conduct mock tests, and guide students toward 7+ band scores. British Council or IDP certification preferred.</div><div class="job-footer"><div class="job-meta"><span>📍 Hyderabad</span><span>💰 ₹3.5–6 LPA</span><span>⏱ Full-time</span></div><a class="apply-btn" href="mailto:hr@vynex.com?subject=Application - IELTS Coach">Send Resume</a></div></div>
       </div>
-
-      <!-- PTE Trainer -->
       <div class="job-card" data-dept="coaching">
-        <div class="job-card-top">
-          <div class="job-dept-badge" style="background:var(--yellow-pale);color:var(--yellow)">📚 Coaching</div>
-          <div class="job-title">PTE / TOEFL Trainer</div>
-          <div class="job-sub">Help students master PTE Academic and TOEFL with expert coaching and score strategies</div>
-        </div>
-        <div class="job-card-body">
-          <div class="job-tags">
-            <span class="jtag" style="background:var(--yellow-pale);color:var(--yellow)">PTE Expert</span>
-            <span class="jtag" style="background:var(--blue-pale);color:var(--blue)">TOEFL</span>
-            <span class="jtag" style="background:var(--green-pale);color:var(--green)">Full-time</span>
-          </div>
-          <div class="job-desc">Conduct PTE Academic and TOEFL coaching for students targeting Australia, Canada, and USA universities. Develop digital practice resources and track student progress. PTE score of 79+ required to apply.</div>
-          <div class="job-footer">
-            <div class="job-meta">
-              <span>📍 Hyderabad</span>
-              <span>💰 ₹3–5.5 LPA</span>
-              <span>⏱ Full-time</span>
-            </div>
-            <button class="apply-btn" onclick="openModal('PTE / TOEFL Trainer','Coaching')">Apply Now</button>
-          </div>
-        </div>
+        <div class="job-card-top"><div class="job-dept-badge" style="background:var(--yellow-pale);color:var(--yellow)">📚 Coaching</div><div class="job-title">PTE / TOEFL Trainer</div><div class="job-sub">Help students master PTE Academic and TOEFL with expert coaching and score strategies</div></div>
+        <div class="job-card-body"><div class="job-tags"><span class="jtag" style="background:var(--yellow-pale);color:var(--yellow)">PTE Expert</span><span class="jtag" style="background:var(--blue-pale);color:var(--blue)">TOEFL</span><span class="jtag" style="background:var(--green-pale);color:var(--green)">Full-time</span></div><div class="job-desc">Conduct PTE Academic and TOEFL coaching for students targeting Australia, Canada, and USA universities. Develop digital practice resources and track student progress. PTE score of 79+ required to apply.</div><div class="job-footer"><div class="job-meta"><span>📍 Hyderabad</span><span>💰 ₹3–5.5 LPA</span><span>⏱ Full-time</span></div><a class="apply-btn" href="mailto:hr@vynex.com?subject=Application - PTE TOEFL Trainer">Send Resume</a></div></div>
       </div>
-
-      <!-- Overseas Education Counsellor -->
       <div class="job-card" data-dept="consulting">
-        <div class="job-card-top">
-          <div class="job-dept-badge" style="background:var(--blue-pale);color:var(--blue)">🌍 Consulting</div>
-          <div class="job-title">Overseas Education Counsellor</div>
-          <div class="job-sub">Guide students through destination selection, university applications, and visa processes</div>
-        </div>
-        <div class="job-card-body">
-          <div class="job-tags">
-            <span class="jtag" style="background:var(--blue-pale);color:var(--blue)">Student Visa</span>
-            <span class="jtag" style="background:var(--green-pale);color:var(--green)">Full-time</span>
-            <span class="jtag" style="background:var(--orange-pale);color:var(--orange)">Hyderabad</span>
-          </div>
-          <div class="job-desc">Counsel students and families on study abroad options, shortlist universities, assist with applications and documentation. Strong communication skills and knowledge of US/UK/Canada/Australia systems required.</div>
-          <div class="job-footer">
-            <div class="job-meta">
-              <span>📍 Hyderabad</span>
-              <span>💰 ₹3.5–7 LPA</span>
-              <span>⏱ Full-time</span>
-            </div>
-            <button class="apply-btn" onclick="openModal('Overseas Education Counsellor','Consulting')">Apply Now</button>
-          </div>
-        </div>
+        <div class="job-card-top"><div class="job-dept-badge" style="background:var(--blue-pale);color:var(--blue)">🌍 Consulting</div><div class="job-title">Overseas Education Counsellor</div><div class="job-sub">Guide students through destination selection, university applications, and visa processes</div></div>
+        <div class="job-card-body"><div class="job-tags"><span class="jtag" style="background:var(--blue-pale);color:var(--blue)">Student Visa</span><span class="jtag" style="background:var(--green-pale);color:var(--green)">Full-time</span><span class="jtag" style="background:var(--orange-pale);color:var(--orange)">Hyderabad</span></div><div class="job-desc">Counsel students and families on study abroad options, shortlist universities, assist with applications and documentation. Strong communication skills and knowledge of US/UK/Canada/Australia systems required.</div><div class="job-footer"><div class="job-meta"><span>📍 Hyderabad</span><span>💰 ₹3.5–7 LPA</span><span>⏱ Full-time</span></div><a class="apply-btn" href="mailto:hr@vynex.com?subject=Application - Overseas Education Counsellor">Send Resume</a></div></div>
       </div>
-
-      <!-- Immigration Consultant -->
       <div class="job-card" data-dept="consulting">
-        <div class="job-card-top">
-          <div class="job-dept-badge" style="background:var(--blue-pale);color:var(--blue)">🌍 Consulting</div>
-          <div class="job-title">Immigration Consultant</div>
-          <div class="job-sub">Manage PR and immigration cases for Canada, Australia, and New Zealand pathways</div>
-        </div>
-        <div class="job-card-body">
-          <div class="job-tags">
-            <span class="jtag" style="background:var(--blue-pale);color:var(--blue)">PR Expert</span>
-            <span class="jtag" style="background:var(--purple-pale);color:var(--purple)">Express Entry</span>
-            <span class="jtag" style="background:var(--green-pale);color:var(--green)">Full-time</span>
-          </div>
-          <div class="job-desc">Handle permanent residency and immigration cases for clients targeting Canada (Express Entry/PNP), Australia (Skilled), and NZ (Skilled Migrant). RCIC or equivalent certification is a strong advantage.</div>
-          <div class="job-footer">
-            <div class="job-meta">
-              <span>📍 Hyderabad</span>
-              <span>💰 ₹5–10 LPA</span>
-              <span>⏱ Full-time</span>
-            </div>
-            <button class="apply-btn" onclick="openModal('Immigration Consultant','Consulting')">Apply Now</button>
-          </div>
-        </div>
+        <div class="job-card-top"><div class="job-dept-badge" style="background:var(--blue-pale);color:var(--blue)">🌍 Consulting</div><div class="job-title">Immigration Consultant</div><div class="job-sub">Manage PR and immigration cases for Canada, Australia, and New Zealand pathways</div></div>
+        <div class="job-card-body"><div class="job-tags"><span class="jtag" style="background:var(--blue-pale);color:var(--blue)">PR Expert</span><span class="jtag" style="background:var(--purple-pale);color:var(--purple)">Express Entry</span><span class="jtag" style="background:var(--green-pale);color:var(--green)">Full-time</span></div><div class="job-desc">Handle permanent residency and immigration cases for clients targeting Canada (Express Entry/PNP), Australia (Skilled), and NZ (Skilled Migrant). RCIC or equivalent certification is a strong advantage.</div><div class="job-footer"><div class="job-meta"><span>📍 Hyderabad</span><span>💰 ₹5–10 LPA</span><span>⏱ Full-time</span></div><a class="apply-btn" href="mailto:hr@vynex.com?subject=Application - Immigration Consultant">Send Resume</a></div></div>
       </div>
-
-      <!-- Frontend Developer -->
       <div class="job-card" data-dept="tech">
-        <div class="job-card-top">
-          <div class="job-dept-badge" style="background:var(--green-pale);color:var(--green)">💻 Tech</div>
-          <div class="job-title">Frontend Web Developer</div>
-          <div class="job-sub">Build and maintain our website, student portal, and internal tools</div>
-        </div>
-        <div class="job-card-body">
-          <div class="job-tags">
-            <span class="jtag" style="background:var(--green-pale);color:var(--green)">HTML/CSS/JS</span>
-            <span class="jtag" style="background:var(--blue-pale);color:var(--blue)">React</span>
-            <span class="jtag" style="background:var(--orange-pale);color:var(--orange)">Full-time</span>
-          </div>
-          <div class="job-desc">Build responsive, fast-loading web pages for our consulting website and student application portal. Collaborate with the UI/UX designer to bring designs to life. 2+ years in HTML/CSS/JavaScript and React preferred.</div>
-          <div class="job-footer">
-            <div class="job-meta">
-              <span>📍 Hyderabad</span>
-              <span>💰 ₹4–8 LPA</span>
-              <span>⏱ Full-time</span>
-            </div>
-            <button class="apply-btn" onclick="openModal('Frontend Web Developer','Tech')">Apply Now</button>
-          </div>
-        </div>
+        <div class="job-card-top"><div class="job-dept-badge" style="background:var(--green-pale);color:var(--green)">💻 Tech</div><div class="job-title">Frontend Web Developer</div><div class="job-sub">Build and maintain our website, student portal, and internal tools</div></div>
+        <div class="job-card-body"><div class="job-tags"><span class="jtag" style="background:var(--green-pale);color:var(--green)">HTML/CSS/JS</span><span class="jtag" style="background:var(--blue-pale);color:var(--blue)">React</span><span class="jtag" style="background:var(--orange-pale);color:var(--orange)">Full-time</span></div><div class="job-desc">Build responsive, fast-loading web pages for our consulting website and student application portal. Collaborate with the UI/UX designer to bring designs to life. 2+ years in HTML/CSS/JavaScript and React preferred.</div><div class="job-footer"><div class="job-meta"><span>📍 Hyderabad</span><span>💰 ₹4–8 LPA</span><span>⏱ Full-time</span></div><a class="apply-btn" href="mailto:hr@vynex.com?subject=Application - Frontend Web Developer">Send Resume</a></div></div>
       </div>
-
-      <!-- Digital Marketing -->
       <div class="job-card" data-dept="sales">
-        <div class="job-card-top">
-          <div class="job-dept-badge" style="background:var(--red-pale);color:var(--red)">📣 Sales & Marketing</div>
-          <div class="job-title">Digital Marketing Executive</div>
-          <div class="job-sub">Drive leads, manage social media, and grow Vynex's online presence across platforms</div>
-        </div>
-        <div class="job-card-body">
-          <div class="job-tags">
-            <span class="jtag" style="background:var(--red-pale);color:var(--red)">SEO/SEM</span>
-            <span class="jtag" style="background:var(--orange-pale);color:var(--orange)">Meta Ads</span>
-            <span class="jtag" style="background:var(--green-pale);color:var(--green)">Full-time</span>
-          </div>
-          <div class="job-desc">Manage Google Ads, Meta campaigns, SEO, content marketing, and email campaigns. Track lead quality, optimize funnels, and help grow student enquiries month-on-month. Google Ads certified preferred.</div>
-          <div class="job-footer">
-            <div class="job-meta">
-              <span>📍 Hyderabad</span>
-              <span>💰 ₹3.5–6.5 LPA</span>
-              <span>⏱ Full-time</span>
-            </div>
-            <button class="apply-btn" onclick="openModal('Digital Marketing Executive','Sales & Marketing')">Apply Now</button>
-          </div>
-        </div>
+        <div class="job-card-top"><div class="job-dept-badge" style="background:var(--red-pale);color:var(--red)">📣 Sales & Marketing</div><div class="job-title">Digital Marketing Executive</div><div class="job-sub">Drive leads, manage social media, and grow Vynex's online presence across platforms</div></div>
+        <div class="job-card-body"><div class="job-tags"><span class="jtag" style="background:var(--red-pale);color:var(--red)">SEO/SEM</span><span class="jtag" style="background:var(--orange-pale);color:var(--orange)">Meta Ads</span><span class="jtag" style="background:var(--green-pale);color:var(--green)">Full-time</span></div><div class="job-desc">Manage Google Ads, Meta campaigns, SEO, content marketing, and email campaigns. Track lead quality, optimize funnels, and help grow student enquiries month-on-month. Google Ads certified preferred.</div><div class="job-footer"><div class="job-meta"><span>📍 Hyderabad</span><span>💰 ₹3.5–6.5 LPA</span><span>⏱ Full-time</span></div><a class="apply-btn" href="mailto:hr@vynex.com?subject=Application - Digital Marketing Executive">Send Resume</a></div></div>
       </div>
-
-      <!-- Student Relationship Manager -->
       <div class="job-card" data-dept="ops">
-        <div class="job-card-top">
-          <div class="job-dept-badge" style="background:var(--teal-pale);color:var(--teal)">⚙️ Operations</div>
-          <div class="job-title">Student Relationship Manager</div>
-          <div class="job-sub">Manage student journey from enquiry to visa approval — the face of Vynex</div>
-        </div>
-        <div class="job-card-body">
-          <div class="job-tags">
-            <span class="jtag" style="background:var(--teal-pale);color:var(--teal)">CRM</span>
-            <span class="jtag" style="background:var(--blue-pale);color:var(--blue)">Student Services</span>
-            <span class="jtag" style="background:var(--green-pale);color:var(--green)">Full-time</span>
-          </div>
-          <div class="job-desc">Serve as the primary point of contact for students throughout their application journey. Coordinate between counsellors, universities, and embassies. Strong communication, empathy and follow-up skills essential.</div>
-          <div class="job-footer">
-            <div class="job-meta">
-              <span>📍 Hyderabad</span>
-              <span>💰 ₹3–5 LPA</span>
-              <span>⏱ Full-time</span>
-            </div>
-            <button class="apply-btn" onclick="openModal('Student Relationship Manager','Operations')">Apply Now</button>
-          </div>
-        </div>
+        <div class="job-card-top"><div class="job-dept-badge" style="background:var(--teal-pale);color:var(--teal)">⚙️ Operations</div><div class="job-title">Student Relationship Manager</div><div class="job-sub">Manage student journey from enquiry to visa approval — the face of Vynex</div></div>
+        <div class="job-card-body"><div class="job-tags"><span class="jtag" style="background:var(--teal-pale);color:var(--teal)">CRM</span><span class="jtag" style="background:var(--blue-pale);color:var(--blue)">Student Services</span><span class="jtag" style="background:var(--green-pale);color:var(--green)">Full-time</span></div><div class="job-desc">Serve as the primary point of contact for students throughout their application journey. Coordinate between counsellors, universities, and embassies. Strong communication, empathy and follow-up skills essential.</div><div class="job-footer"><div class="job-meta"><span>📍 Hyderabad</span><span>💰 ₹3–5 LPA</span><span>⏱ Full-time</span></div><a class="apply-btn" href="mailto:hr@vynex.com?subject=Application - Student Relationship Manager">Send Resume</a></div></div>
       </div>
-
-      <!-- Visa Documentation Specialist -->
       <div class="job-card" data-dept="ops">
-        <div class="job-card-top">
-          <div class="job-dept-badge" style="background:var(--teal-pale);color:var(--teal)">⚙️ Operations</div>
-          <div class="job-title">Visa Documentation Specialist</div>
-          <div class="job-sub">Ensure 100% accurate, complete visa documentation for all student and PR applications</div>
-        </div>
-        <div class="job-card-body">
-          <div class="job-tags">
-            <span class="jtag" style="background:var(--teal-pale);color:var(--teal)">Visa Docs</span>
-            <span class="jtag" style="background:var(--orange-pale);color:var(--orange)">Detail-oriented</span>
-            <span class="jtag" style="background:var(--green-pale);color:var(--green)">Full-time</span>
-          </div>
-          <div class="job-desc">Prepare, review, and organize visa applications for US, UK, Canada, Australia, Germany. Liaise with embassies, ensure document compliance, and maintain client records. Knowledge of immigration portals is a plus.</div>
-          <div class="job-footer">
-            <div class="job-meta">
-              <span>📍 Hyderabad</span>
-              <span>💰 ₹2.8–5 LPA</span>
-              <span>⏱ Full-time</span>
-            </div>
-            <button class="apply-btn" onclick="openModal('Visa Documentation Specialist','Operations')">Apply Now</button>
-          </div>
-        </div>
+        <div class="job-card-top"><div class="job-dept-badge" style="background:var(--teal-pale);color:var(--teal)">⚙️ Operations</div><div class="job-title">Visa Documentation Specialist</div><div class="job-sub">Ensure 100% accurate, complete visa documentation for all student and PR applications</div></div>
+        <div class="job-card-body"><div class="job-tags"><span class="jtag" style="background:var(--teal-pale);color:var(--teal)">Visa Docs</span><span class="jtag" style="background:var(--orange-pale);color:var(--orange)">Detail-oriented</span><span class="jtag" style="background:var(--green-pale);color:var(--green)">Full-time</span></div><div class="job-desc">Prepare, review, and organize visa applications for US, UK, Canada, Australia, Germany. Liaise with embassies, ensure document compliance, and maintain client records. Knowledge of immigration portals is a plus.</div><div class="job-footer"><div class="job-meta"><span>📍 Hyderabad</span><span>💰 ₹2.8–5 LPA</span><span>⏱ Full-time</span></div><a class="apply-btn" href="mailto:hr@vynex.com?subject=Application - Visa Documentation Specialist">Send Resume</a></div></div>
       </div>
-
-    </div><!-- /jobs-grid -->
+    </div>
   </div>
-
-  <!-- General Application CTA -->
   <div class="sec reveal">
     <div class="cta-banner">
       <div><h2>Don't See Your Role?</h2><p>We're always looking for talented people. Send us a general application and we'll be in touch.</p></div>
-      <div class="cta-btns"><button class="btn-primary" onclick="openModal('General Application','Open Application')">Send Open Application</button></div>
-    </div>
-  </div>
-
-</div><!-- /page-careers -->
-
-
-<!-- ══ APPLY MODAL ══ -->
-<div class="modal-overlay" id="apply-modal" onclick="closeModalOutside(event)">
-  <div class="modal">
-    <div class="modal-header">
-      <div>
-        <h3 id="modal-job-title">Apply for Role</h3>
-        <p id="modal-job-dept">Department</p>
-      </div>
-      <button class="modal-close" onclick="closeModal()">✕</button>
-    </div>
-    <div class="modal-body">
-      <div class="mfrow">
-        <div class="mfg"><label>First Name *</label><input type="text" placeholder="Your first name"></div>
-        <div class="mfg"><label>Last Name *</label><input type="text" placeholder="Your last name"></div>
-      </div>
-      <div class="mfg"><label>Email Address *</label><input type="email" placeholder="you@email.com"></div>
-      <div class="mfg"><label>Phone Number *</label><input type="tel" placeholder="+91 XXXXX XXXXX"></div>
-      <div class="mfrow">
-        <div class="mfg"><label>Years of Experience</label><select><option>0–1 year</option><option>1–2 years</option><option>2–4 years</option><option>4–6 years</option><option>6+ years</option></select></div>
-        <div class="mfg"><label>Current Location</label><input type="text" placeholder="e.g. Hyderabad, AP"></div>
-      </div>
-      <div class="mfg"><label>LinkedIn / Portfolio URL</label><input type="url" placeholder="https://linkedin.com/in/yourname"></div>
-      <div class="mfg"><label>Why do you want to join Vynex?</label><textarea rows="3" placeholder="Tell us what excites you about this role and Vynex..."></textarea></div>
-      <div class="mfg">
-        <label>Upload Resume / CV</label>
-        <div class="upload-box" onclick="this.querySelector('input').click()">
-          <div style="font-size:28px">📎</div>
-          <p>Click to upload your resume (PDF or DOCX)</p>
-          <input type="file" accept=".pdf,.doc,.docx" style="display:none">
-        </div>
-      </div>
-    </div>
-    <div class="modal-footer">
-      <button class="modal-submit" onclick="submitApplication(this)">Submit Application →</button>
+      <div class="cta-btns"><a class="btn-primary" href="mailto:hr@vynex.com?subject=Open Application - Vynex Overseas">📧 Email hr@vynex.com</a></div>
     </div>
   </div>
 </div>
 
-
-<!-- ══ FOOTER ══ -->
 <footer>
   <div class="footer-grid">
     <div>
       <div class="fb-name">vynex</div>
       <div class="fb-sub">Overseas Consulting · Hyderabad · Est. 2019</div>
       <p class="fb-desc">Empowering ambitions from Hyderabad to the world. Your global journey starts here.</p>
-      <div class="fsocials">
-        <a class="fsoc">in</a><a class="fsoc">f</a><a class="fsoc">ig</a><a class="fsoc">yt</a>
-      </div>
+      <div class="fsocials"><a class="fsoc">in</a><a class="fsoc">f</a><a class="fsoc">ig</a><a class="fsoc">yt</a></div>
     </div>
-    <div class="fcol">
-      <h4>Services</h4>
-      <ul><li><a onclick="showSection('services')">Student Visa</a></li><li><a onclick="showSection('services')">University Admissions</a></li><li><a onclick="showSection('services')">PR & Immigration</a></li><li><a onclick="showSection('services')">Work Permits</a></li><li><a onclick="showSection('services')">IELTS / PTE</a></li></ul>
-    </div>
-    <div class="fcol">
-      <h4>Destinations</h4>
-      <ul><li><a onclick="openDest('usa')">USA</a></li><li><a onclick="openDest('uk')">United Kingdom</a></li><li><a onclick="openDest('canada')">Canada</a></li><li><a onclick="openDest('australia')">Australia</a></li><li><a onclick="openDest('germany')">Germany</a></li><li><a onclick="openDest('nz')">New Zealand</a></li></ul>
-    </div>
-    <div class="fcol">
-      <h4>Company</h4>
-      <ul><li><a onclick="goPage('careers')">Careers — We're Hiring!</a></li><li><a onclick="showSection('testimonials')">Success Stories</a></li><li><a onclick="showSection('contact')">Contact Us</a></li></ul>
-    </div>
+    <div class="fcol"><h4>Services</h4><ul>
+      <li><a onclick="showSection('services')">Student Visa</a></li>
+      <li><a onclick="showSection('services')">University Admissions</a></li>
+      <li><a onclick="showSection('services')">PR & Immigration</a></li>
+      <li><a onclick="showSection('services')">Work Permits</a></li>
+      <li><a onclick="showSection('services')">IELTS / PTE</a></li>
+    </ul></div>
+    <div class="fcol"><h4>Destinations</h4><ul>
+      <li><a onclick="openDest('usa')">USA</a></li>
+      <li><a onclick="openDest('uk')">United Kingdom</a></li>
+      <li><a onclick="openDest('canada')">Canada</a></li>
+      <li><a onclick="openDest('australia')">Australia</a></li>
+      <li><a onclick="openDest('germany')">Germany</a></li>
+      <li><a onclick="openDest('nz')">New Zealand</a></li>
+    </ul></div>
+    <div class="fcol"><h4>Company</h4><ul>
+      <li><a onclick="goPage('careers')">Careers — We're Hiring!</a></li>
+      <li><a onclick="showSection('testimonials')">Success Stories</a></li>
+      <li><a onclick="showSection('contact')">Contact Us</a></li>
+    </ul></div>
   </div>
   <div class="footer-btm">
     <div class="footer-copy">© 2025 Vynex Overseas Consulting. All rights reserved. Hyderabad, India.</div>
@@ -1159,101 +759,84 @@ footer{background:var(--navy);color:#fff;padding:36px 24px 18px;}
   </div>
 </footer>
 
-
 <script>
-// ── PAGE NAVIGATION ──
-function goPage(id) {
-  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-  document.getElementById('page-' + id).classList.add('active');
-  window.scrollTo({top:0, behavior:'smooth'});
-  document.querySelectorAll('.ns-item').forEach(n => n.classList.remove('active'));
+function goPage(id){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById('page-'+id).classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+  document.querySelectorAll('.ns-item').forEach(n=>n.classList.remove('active'));
 }
-
-// ── SECTION SCROLL ──
-function showSection(id) {
+function showSection(id){
   goPage('home');
-  setTimeout(() => {
-    const el = document.getElementById(id);
-    if (el) el.scrollIntoView({behavior:'smooth', block:'start'});
-  }, 80);
+  setTimeout(()=>{const el=document.getElementById(id);if(el)el.scrollIntoView({behavior:'smooth',block:'start'});},80);
 }
-
-// ── DESTINATION TABS ──
-function showDest(id, btn) {
-  document.querySelectorAll('.dest-panel').forEach(p => p.classList.remove('active'));
-  document.querySelectorAll('.dtab').forEach(t => t.classList.remove('active'));
-  document.getElementById('dest-' + id).classList.add('active');
+function showDest(id,btn){
+  document.querySelectorAll('.dest-panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.dtab').forEach(t=>t.classList.remove('active'));
+  document.getElementById('dest-'+id).classList.add('active');
   btn.classList.add('active');
 }
-function openDest(id) {
+function openDest(id){
   goPage('home');
-  setTimeout(() => {
+  setTimeout(()=>{
     document.getElementById('destinations').scrollIntoView({behavior:'smooth'});
-    const tab = document.querySelector(`.dtab[onclick*="${id}"]`);
-    if(tab) showDest(id, tab);
-  }, 80);
+    document.querySelectorAll('.dtab').forEach(t=>{
+      if(t.getAttribute('onclick') && t.getAttribute('onclick').includes("'"+id+"'")){
+        showDest(id,t);
+      }
+    });
+  },80);
 }
-
-// ── JOB FILTER ──
-function filterJobs(dept, btn) {
-  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+function filterJobs(dept,btn){
+  document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
   btn.classList.add('active');
-  document.querySelectorAll('.job-card').forEach(card => {
-    card.style.display = (dept === 'all' || card.dataset.dept === dept) ? 'block' : 'none';
+  document.querySelectorAll('.job-card').forEach(card=>{
+    card.style.display=(dept==='all'||card.dataset.dept===dept)?'block':'none';
   });
 }
-
-// ── APPLY MODAL ──
-function openModal(title, dept) {
-  document.getElementById('modal-job-title').textContent = 'Apply — ' + title;
-  document.getElementById('modal-job-dept').textContent = '📁 ' + dept + ' · Hyderabad, India';
-  document.getElementById('apply-modal').classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
-function closeModal() {
-  document.getElementById('apply-modal').classList.remove('open');
-  document.body.style.overflow = '';
-}
-function closeModalOutside(e) {
-  if(e.target === document.getElementById('apply-modal')) closeModal();
-}
-function submitApplication(btn) {
-  const orig = btn.textContent;
-  btn.textContent = 'Submitting...'; btn.disabled = true;
-  setTimeout(() => {
-    btn.textContent = '✅ Application Received! We\'ll contact you within 48 hours.';
-    btn.style.background = 'var(--green)';
-    setTimeout(() => { closeModal(); btn.textContent = orig; btn.disabled = false; btn.style.background = ''; }, 3000);
-  }, 1400);
-}
-
-// ── CONTACT FORM ──
-function submitEnquiry(btn) {
-  const orig = btn.textContent;
-  btn.textContent = 'Sending...'; btn.disabled = true;
-  setTimeout(() => {
-    btn.textContent = '✅ Sent! We\'ll contact you within 24 hours.';
-    btn.style.background = 'var(--green)';
-    setTimeout(() => { btn.textContent = orig; btn.disabled = false; btn.style.background = ''; }, 3500);
-  }, 1400);
-}
-
-// ── SCROLL REVEAL ──
-const ro = new IntersectionObserver(entries => {
-  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
-}, {threshold: 0.1});
-document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
-
-// ── NAV ACTIVE ──
-window.addEventListener('scroll', () => {
-  const ids = ['services','destinations','process','testimonials','contact'];
-  ids.forEach(id => {
-    const el = document.getElementById(id);
-    if(!el) return;
-    const r = el.getBoundingClientRect();
-    if(r.top <= 130 && r.bottom >= 130) {
-      document.querySelectorAll('.ns-item').forEach(n => n.classList.remove('active'));
+function submitEnquiry(btn){
+  document.querySelectorAll('.err-msg').forEach(e=>e.classList.remove('show'));
+  document.querySelectorAll('.fg input.invalid,.fg select.invalid,.fg textarea.invalid').forEach(e=>e.classList.remove('invalid'));
+  const fields=[
+    {id:'eq-fname', err:'err-fname', check:v=>v.trim()!==''},
+    {id:'eq-lname', err:'err-lname', check:v=>v.trim()!==''},
+    {id:'eq-email', err:'err-email', check:v=>/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim())},
+    {id:'eq-phone', err:'err-phone', check:v=>v.trim().length>=7},
+    {id:'eq-service',err:'err-service',check:v=>v!==''},
+    {id:'eq-dest',  err:'err-dest',  check:v=>v!==''},
+    {id:'eq-goals', err:'err-goals', check:v=>v.trim()!==''},
+  ];
+  let valid=true;
+  fields.forEach(f=>{
+    const el=document.getElementById(f.id);
+    if(!f.check(el.value)){
+      el.classList.add('invalid');
+      document.getElementById(f.err).classList.add('show');
+      valid=false;
     }
+    el.addEventListener('input',function(){
+      this.classList.remove('invalid');
+      document.getElementById(f.err).classList.remove('show');
+    },{once:true});
+  });
+  if(!valid)return;
+  const orig=btn.textContent;
+  btn.textContent='Sending...';btn.disabled=true;
+  setTimeout(()=>{
+    btn.textContent='✅ Sent! We will contact you within 24 hours.';
+    btn.style.background='var(--green)';
+    fields.forEach(f=>{document.getElementById(f.id).value='';});
+    setTimeout(()=>{btn.textContent=orig;btn.disabled=false;btn.style.background='';},3500);
+  },1400);
+}
+const ro=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});},{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
+window.addEventListener('scroll',()=>{
+  const ids=['services','destinations','process','testimonials','contact'];
+  ids.forEach(id=>{
+    const el=document.getElementById(id);if(!el)return;
+    const r=el.getBoundingClientRect();
+    if(r.top<=130&&r.bottom>=130){document.querySelectorAll('.ns-item').forEach(n=>n.classList.remove('active'));}
   });
 });
 </script>
